@@ -1,0 +1,2578 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- ******************************************************************
+	* Licensed Materials - Property of IBM
+	*
+	* (C) Copyright IBM Corp. 2013
+	*
+	* US Government Users Restricted Rights - Use, duplication, or
+	* disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+	*
+	* Version 1.0 	TlogAce.xsd
+	*
+	* This DFDL schema is supplied by IBM. It provides a DFDL model for
+	* 4690 point-of-sale transaction log (TLog) data (ACE format).
+	*
+	* Each Transaction consists of a number of TransactionRecords.
+	* Each TransactionRecord is of a particular type given by the StringType element.
+	* Initiators are used to discriminate the record types.
+	* Some record types have sub-types which are discriminated either using
+	* initiators or discriminators.
+	* 
+	******************************************************************* --><xsd:schema xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/TlogAceFormat" xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+        
+  <xsd:include schemaLocation="TlogAceTypes.xsd"/>
+  <xsd:import namespace="http://www.ibm.com/dfdl/TlogAceFormat" schemaLocation="TlogAceFormat.xsd"/>
+  <xsd:include schemaLocation="TlogAceCommon.xsd"/>
+  <xsd:include schemaLocation="TlogAceCustom.xsd"/>
+
+  <xsd:element ibmSchExtn:docRoot="true" name="Transactions">
+    <xsd:complexType>
+      <xsd:sequence dfdl:separator="">
+        <xsd:element maxOccurs="unbounded" ref="Transaction"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+    <xsd:annotation>
+		<xsd:appinfo source="http://www.ogf.org/dfdl/">
+			<dfdl:format ref="fmt:TlogAceFormat"/>
+		</xsd:appinfo>
+	</xsd:annotation>
+
+    <xsd:element dfdl:emptyValueDelimiterPolicy="both" dfdl:initiator="&quot;" dfdl:terminator="&quot;%CR;%LF;" ibmSchExtn:docRoot="true" name="Transaction">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;,&quot;" dfdl:separatorPolicy="suppressed">
+                <xsd:element maxOccurs="unbounded" name="TransactionRecord">
+                                        <xsd:annotation>
+            <xsd:appinfo source="http://www.ogf.org/dfdl/"/>
+          </xsd:annotation>
+                    <xsd:complexType>
+                    	<!-- -->
+                    	<xsd:choice>
+                    		<!-- All transaction categories are distinguished by a unique initiator -->
+							<!-- All branches of the following choice must have 2 byte initiators of the form '%#xNN;:' -->
+                            <xsd:choice dfdl:initiatedContent="yes">
+    	                        <xsd:element ref="TransactionRecord00">
+					            </xsd:element>
+	                            <xsd:element ref="TransactionRecord01">
+					            </xsd:element>
+    	                        <xsd:element ref="TransactionRecord02">
+					            </xsd:element>
+                                <xsd:element ref="TransactionRecord03">
+					            </xsd:element>
+                                <xsd:element ref="TransactionRecord04">
+					            </xsd:element>
+                                <xsd:element ref="TransactionRecord05">
+					            </xsd:element>
+                                <xsd:element ref="TransactionRecord06">
+					            </xsd:element>
+                                <xsd:element ref="TransactionRecord07">
+					            </xsd:element>
+                                <xsd:element ref="TransactionRecord08">
+					            </xsd:element>
+                                <xsd:element ref="TransactionRecord09">
+					            </xsd:element>
+                                <xsd:element ref="TransactionRecord10">
+					            </xsd:element>
+                                <xsd:group ref="choice_11">
+                                </xsd:group>
+                                <xsd:element ref="TransactionRecord13">
+                                </xsd:element>
+                            	<xsd:element ref="TransactionRecord16">
+					            </xsd:element>
+                            	<xsd:element ref="TransactionRecord21">
+					            </xsd:element>
+                                <xsd:group ref="choice_80">
+					            </xsd:group>
+                                <xsd:group ref="choice_97">
+					            </xsd:group>
+                                <xsd:group ref="choice_99">
+					            </xsd:group>
+					            <!-- 20 are exception log records so put at end -->
+                            	<xsd:group ref="choice_20">
+					            </xsd:group>
+					        </xsd:choice>
+							<!-- 98 has 1 byte initiator -->
+                            <xsd:element ref="TransactionRecord98">
+				            </xsd:element>
+                           	<!-- Custom group -->
+                            <xsd:group ref="choice_Custom">
+				            </xsd:group>
+                            <xsd:element ref="TransactionRecordXX">
+					        </xsd:element>
+                        </xsd:choice>
+                    </xsd:complexType>
+                </xsd:element>
+             </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+	<!-- Catch-all record so that everything can always be parsed -->
+    <xsd:element name="TransactionRecordXX">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="StringType" type="type_PS"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x00;:" name="TransactionRecord00">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('00')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+                <xsd:element dfdl:length="2" dfdl:lengthKind="explicit" name="TerminalNumber" type="type_PS">
+                </xsd:element>
+                <xsd:element dfdl:length="2" dfdl:lengthKind="explicit" ibmDfdlExtn:sampleValue="1" name="TransactionNumber" type="type_PI">
+                </xsd:element>
+                <xsd:element dfdl:length="5" dfdl:lengthKind="explicit" name="DateTime" type="type_PI">
+                </xsd:element>
+                <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" ibmDfdlExtn:sampleValue="0F00" name="TransactionType" type="type_PS">
+                </xsd:element>
+                <xsd:element dfdl:length="2" dfdl:lengthKind="explicit" name="NumberOfStrings" type="type_PD">
+                </xsd:element>
+                <xsd:element   ibmDfdlExtn:sampleValue="1.0" minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Password" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="GrossPositive" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="GrossNegative" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="RingTime" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TenderTime" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="SpecialTime" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="InactiveTime" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat1" type="type_4ByteBitField_Desc">
+				</xsd:element>
+                <xsd:element   minOccurs="0" name="AltPrice" type="type_PD">
+				</xsd:element>
+                <xsd:element   minOccurs="0" name="VoidTrc" type="type_PD">
+				</xsd:element>
+				<xsd:element ibmDfdlExtn:sampleValue="0F00" maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x01;:" name="TransactionRecord01">
+	    <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('01')}" name="StringType" type="type_PS"> 
+           		-->
+                <xsd:element   minOccurs="0" name="ItemCode" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ExtendedPrice" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="DepartmentNumber" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="CouponFamilyNumber" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat1" type="type_4ByteBitField_Desc">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat2" type="type_2ByteBitField_ByteReversedLittleIndian">                                 
+                </xsd:element>
+                <xsd:element dfdl:occursCountKind="implicit" maxOccurs="1" minOccurs="0" name="Indicat3" type="type_PS">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat4" type="type_4ByteBitField">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="OrdinalNumber" type="type_PI">
+				</xsd:element>
+				<xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+   	</xsd:element>
+
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x02;:" name="TransactionRecord02">
+	    <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('02')}" name="StringType" type="type_PS"> 
+           		-->
+                <xsd:element   minOccurs="0" name="MultiPricingGroup" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="DealQuantity" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="PricingMethod" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="SaleQuantity" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="SalePrice" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="QtyOrWgtOrVol" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat1" type="type_1ByteBitField">
+                </xsd:element>
+				<xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x03;:" name="TransactionRecord03">
+        <xsd:complexType>
+        	<xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('03')}" name="StringType" type="type_PS"> 
+           		-->
+            	<xsd:group ref="sequence_03_and_04">
+            	</xsd:group>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x04;:" name="TransactionRecord04">
+        <xsd:complexType>
+        	<xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('04')}" name="StringType" type="type_PS"> 
+           		-->
+    	        <xsd:group ref="sequence_03_and_04">
+	            </xsd:group>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+	<xsd:group name="sequence_03_and_04">
+		<xsd:sequence>
+                <xsd:element   minOccurs="0" name="DiscountGroup" type="type_PI">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="DiscountRate" type="type_PI">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="DiscountAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="DiscountTaxExemptAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxableExemptAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxExemptId" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxExemptAmountA" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxExemptAmountB" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxExemptAmountC" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxExemptAmountD" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxableExemptAmountA" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxableExemptAmountB" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxableExemptAmountC" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxableExemptAmountD" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxExemptAmountE" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxExemptAmountF" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxExemptAmountG" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxExemptAmountH" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxableExemptAmountE" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxableExemptAmountF" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxableExemptAmountG" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxableExemptAmountH" type="type_PL">
+                </xsd:element>
+				<xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+		</xsd:sequence>
+	</xsd:group>
+	  
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x05;:" name="TransactionRecord05">
+        <xsd:complexType>
+        	<xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('05')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+	            <xsd:group ref="sequence_05_and_06">
+    	        </xsd:group>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x06;:" name="TransactionRecord06">
+        <xsd:complexType>
+        	<xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('06')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+	            <xsd:group ref="sequence_05_and_06">
+    	        </xsd:group>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+	<xsd:group name="sequence_05_and_06">
+		<xsd:sequence>
+                <xsd:element   minOccurs="0" name="TenderType" type="type_PI">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TenderAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TenderCashingFee" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Customer" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Status" type="type_PI">
+                </xsd:element>
+				<xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+		</xsd:sequence>
+	</xsd:group>
+
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x07;:" name="TransactionRecord07">
+        <xsd:complexType>
+        	<xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('07')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+	            <xsd:group ref="sequence_07_and_08">
+    	        </xsd:group>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x08;:" name="TransactionRecord08">
+        <xsd:complexType>
+        	<xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('08')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+            	<xsd:group ref="sequence_07_and_08">
+            	</xsd:group>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+	<xsd:group name="sequence_07_and_08">
+		<xsd:sequence>
+                <xsd:element   minOccurs="0" name="TaxAAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxBAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxCAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxDAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxASales" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxBSales" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxCSales" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxDSales" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxEAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxFAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxGAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxHAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxESales" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxFSales" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxGSales" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TaxHSales" type="type_PL">
+                </xsd:element>
+				<xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+		</xsd:sequence>
+	</xsd:group>
+
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x09;:" name="TransactionRecord09">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('09')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+                <xsd:element   minOccurs="0" name="TenderType" type="type_PI">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TenderAmount" type="type_PL">
+                </xsd:element>
+				<xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x10;:" name="TransactionRecord10">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('10')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PS">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+				<xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+	<!-- Group for all 11 records --> 
+	<!-- All 11 records discriminate on SubStringType except the DataEntry and catch-all records -->
+	<!-- When dfdl:inputValueCalc supported, we will use an initiator instead -->
+	<!-- User can add custom 11 records --> 
+    <xsd:group name="choice_11">
+				<xsd:choice dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x11;:">
+					<!-- All branches of the following choice must have the same length initiator -->
+					<xsd:choice>	
+		                <xsd:element ref="TransactionRecord11_BB">
+						</xsd:element>
+    		            <xsd:element ref="TransactionRecord11_CC">
+						</xsd:element>
+    	        	    <xsd:element ref="TransactionRecord11_CE">
+						</xsd:element>
+	    	            <xsd:element ref="TransactionRecord11_DB">
+						</xsd:element>
+    	        	    <xsd:element ref="TransactionRecord11_DE">
+						</xsd:element>
+	    	            <xsd:element ref="TransactionRecord11_EE">
+						</xsd:element>
+    		            <xsd:element ref="TransactionRecord11_FF">
+						</xsd:element>
+					</xsd:choice>
+					<!-- 11_DD has an extra unused field at start so breaks initiator length rule -->
+   		            <xsd:element ref="TransactionRecord11_DD">
+					</xsd:element>
+					<!-- Custom 11 records -->
+			        <xsd:group ref="choice_11_Custom">
+		            </xsd:group>
+    	            <xsd:element ref="TransactionRecord11_DataEntry">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord11_XX">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{fn:true()}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+        	    </xsd:choice>
+    </xsd:group>
+
+	<!-- Data entry record for 11 -->
+	<!-- Note this does not have a SubStringType field -->
+    <xsd:element name="TransactionRecord11_DataEntry">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('11')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+                <xsd:element   minOccurs="0" name="UserData1" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserData2" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserData3" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserData4" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserData5" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserData6" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+	<!-- Catch-all record for 11 -->
+	<!-- Note this does not have a SubStringType field -->
+    <xsd:element name="TransactionRecord11_XX">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('11')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord11_BB">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('11')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="BB" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('BB')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="AccountNumber" type="type_PD">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Unused1" type="type_PD">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Unused2" type="type_PD">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Unused3" type="type_PD">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Unused4" type="type_PD">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Unused5" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord11_CC">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('11')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="CC" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('CC')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ManufacturerCouponAmount" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="StoreCouponAmount" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ManufacturerCouponCount" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="StoreCouponCount" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Unused" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord11_CE">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('11')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="CE" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('CE')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   name="ItemCode" type="type_PD">
+                </xsd:element>
+                <xsd:element   name="Value" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="MoreFlags" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Families" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat1" type="type_4ByteBitField_Desc">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat2" type="type_2ByteBitField_ByteReversedLittleIndian">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat3" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat4" type="type_4ByteBitField">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Unused" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord11_DB">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('11')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="DB" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('DB')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   name="CustomerAccountID" type="type_PD">
+                </xsd:element>
+                <xsd:element dfdl:length="2" dfdl:lengthKind="explicit" maxOccurs="96" name="TargetedCoupon" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+	<!-- Beware of non-standard Unused field between StringType and SubStringType -->
+    <xsd:element name="TransactionRecord11_DD">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('11')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+                <xsd:element   minOccurs="0" name="Unused" type="type_PD">
+                </xsd:element>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="DD" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('DD')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="LogFlags" type="type_2ByteBitField">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="CampaignNumber" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ManufacturerNumber" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="PromotionCode" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord11_DE">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('11')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="DE" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('DE')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ClubNumber" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Points" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="RedeemedPoints" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="BonusPoints" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Sales" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord11_EE">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('11')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="EE" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('EE')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   name="CustomerAccountID" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Points" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="CouponAmount" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="CouponCount" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="MessageCount" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TransferredTransactionCount" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TransferredTransactionAmount" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="BonusPoints" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="RedeemedPoints" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="EntryMethod" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord11_FF">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('11')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="FF" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('FF')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="CustomerAccountID" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="NosaleData" type="type_PS">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="StoreNumber" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="EntryMethod" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Unused" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x16;:" name="TransactionRecord16">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('16')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+                <xsd:element dfdl:length="2" dfdl:lengthKind="explicit" name="HostID" type="type_ASCII">
+                </xsd:element>
+                <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="TotalsType" type="type_PI">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TotalAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element dfdl:length="12" dfdl:lengthKind="explicit" name="DateTime" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ActionCode" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="RRN" type="type_ASCII">
+                </xsd:element>
+                <xsd:element dfdl:length="5" dfdl:lengthKind="explicit" name="Sequence" type="type_PL">
+                </xsd:element>
+                <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="MessageType" type="type_PI">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ResponseCode" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ReasonCode" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ExpirationDate" type="type_PI">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TenderType" type="type_PI">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="CashBack" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Account" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="EntryMethod" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ID1" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ID2" type="type_ASCII">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ApprovalCode" type="type_ASCII">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="RCDescription" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ApprovalCodeSource" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="AccountType" type="type_ASCII">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="VoucherNumber" type="type_ASCII">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="AcquireInstitutionNumber" type="type_ASCII">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="OriginalHostResponseCode" type="type_ASCII">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="HostResponseIndicator" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="CardValidationNumber" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="EntryMethodSecondID" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Flags1" type="type_2ByteBitField">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="QualifiedHealthPlanAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="PrescriptionAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="OriginalTenderAmount" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="AlternateTenderID" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+	<!-- No custom user fields because of unbounded repeating data at end -->
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x13;:" name="TransactionRecord13">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('13')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+                <xsd:element   minOccurs="0" name="NumberOfLoans" type="type_PI">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="AmountLoans" type="type_PL">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="NumberOfPickups" type="type_PI">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="AmountPickups" type="type_PL">
+                </xsd:element>
+                <xsd:group ref="sequence_13Tenders"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x21;:" name="TransactionRecord21">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('21')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+                <xsd:element dfdl:length="5" dfdl:lengthKind="explicit" name="DateTime" type="type_PD">
+                </xsd:element>
+                <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="Indicat1" type="type_PI">
+                </xsd:element>
+                <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="Indicat2" type="type_1ByteBitField">
+                </xsd:element>
+                <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="AutoPickup" type="type_1ByteBitField">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="CloseProcedure" type="type_PI">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+	<!-- Group for all 97 records --> 
+	<!-- All 97 records discriminate on SubStringType -->
+	<!-- When dfdl:inputValueCalc supported, we will use an initiator instead -->
+    <xsd:group name="choice_97">
+				<!-- All branches of the following choice must have the same length initiator -->
+				<xsd:choice dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x97;:">	
+	                <xsd:element ref="TransactionRecord97_05">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord97_06">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord97_13">
+					</xsd:element>
+        	    </xsd:choice>
+    </xsd:group>
+
+    <xsd:element name="TransactionRecord97_05">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('97')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="05" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('05')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   name="TenderAmountForeign" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reserved" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord97_06">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('97')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="06" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('06')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   name="TenderAmountForeign" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reserved" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+	<!-- No custom user fields because of unbounded repeating data at end -->
+    <xsd:element name="TransactionRecord97_13">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('97')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="13" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('13')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:group ref="sequence_13Tenders"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+	<!-- 98 is operator training record and can be entirely empty hence initiator is just x98 -->
+	<!-- and the first : is consumed as a prefix separator -->
+    <xsd:element dfdl:emptyValueDelimiterPolicy="initiator" dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x98;" name="TransactionRecord98">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separatorPosition="prefix">
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('98')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+
+	<!-- Group for all 80 records --> 
+	<!-- All 80 records currently discriminate on SubStringType -->
+	<!-- When dfdl:inputValueCalc supported, we will use an initiator instead -->
+    <xsd:group name="choice_80">
+				<!-- All branches of the following choice must have the same length initiator -->
+				<xsd:choice dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x80;:">	
+	                <xsd:element ref="TransactionRecord80_01">
+					</xsd:element>
+   		            <xsd:element ref="TransactionRecord80_02">
+					</xsd:element>
+   	        	    <xsd:element ref="TransactionRecord80_03">
+					</xsd:element>
+        	    </xsd:choice>
+    </xsd:group>
+
+    <xsd:element name="TransactionRecord80_01">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('80')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="01" name="Identifier" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('01')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element dfdl:length="2" dfdl:lengthKind="explicit" name="AgencyID" type="type_ASCII">
+                </xsd:element>
+                <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="Category" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="SubCategory" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="BenefitQuantity" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="PurchaseQuantity" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ZeroPurchaseQuantity" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Cost" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ZeroCost" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TransactionEntryIndex" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ItemCode" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ChildrenArray" type="type_PS">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ZeroChildrenArray" type="type_PS">
+                </xsd:element>
+                <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="Continuation" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="OriginalUPC" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ItemCodeTypeIndicator" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="WICItemFlag" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord80_02">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('80')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="02" name="Identifier" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('02')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element dfdl:length="2" dfdl:lengthKind="explicit" name="AgencyID" type="type_ASCII">
+                </xsd:element>
+                <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="PANLength" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="PAN" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ClaimAmount" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="POSDataCode" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="IssuingAgency" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="FirstDateToSpend" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="LastDateToSpend" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="DiscountAmount" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TransactionSignature" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TransactionDateTime" type="type_PD">
+                </xsd:element>
+                <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="WICSummaryFlag" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord80_03">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('80')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="03" name="Identifier" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('03')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ChildrenArray" type="type_PS">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ZeroChildrenArray" type="type_PS">
+                </xsd:element>
+                <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="Continuation" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+
+	<!-- Group for all 99 records --> 
+	<!-- All 99 records discriminate on Originator and SubType -->
+	<!-- When testKind 'pattern' supported, we will use that instead -->
+    <xsd:group name="choice_99">
+				<xsd:choice dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x99;:">	
+    	            <xsd:element ref="TransactionRecord99_0_0">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_1">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_2">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_3">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_4">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_6">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_7">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_8">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_9">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_10">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_11">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_21">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_22">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_50">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_51">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_52">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_60">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_70">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_78">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_79">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_80">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_81">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord99_0_96">
+					</xsd:element>
+					<!-- Custom 99 records -->
+			        <xsd:group ref="choice_99_Custom">
+		            </xsd:group>
+    	            <xsd:element ref="TransactionRecord99_XX">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{fn:true()}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+        	    </xsd:choice>
+    </xsd:group>
+
+	<!-- Catch-all record for 99 -->
+    <xsd:element name="TransactionRecord99_XX">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PD">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+
+    <xsd:element name="TransactionRecord99_0_0">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 0}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element name="Date" type="type_ASCII">
+	            </xsd:element>
+    	        <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="EntryMethod" type="type_ASCII">
+		        </xsd:element>
+          		<xsd:element dfdl:length="8" dfdl:lengthKind="explicit" name="ShortDate" type="type_ASCII">
+				</xsd:element>
+				<xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_1">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 1}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element name="UserData" type="type_PS">
+            	</xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_2">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 2}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element name="UserData" type="type_ASCII">
+            	</xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="TransactionRecord99_0_3">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 3}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element   name="SignatureLength" type="type_PD">
+	            </xsd:element>
+    	        <xsd:element  name="SignatureData" type="type_PS">
+	            </xsd:element>
+    	        <xsd:element  minOccurs="0" name="Reserved" type="type_PS">
+	            </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="TransactionRecord99_0_4">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 4}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="SignatureType" type="type_ASCII">
+	            </xsd:element>
+    	        <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="SignatureSource" type="type_ASCII">
+	            </xsd:element>
+    	        <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="SignatureFormat" type="type_ASCII">
+	            </xsd:element>
+    	        <xsd:element  minOccurs="0" name="StoreName" type="type_ASCII">
+	            </xsd:element>
+    	        <xsd:element  minOccurs="0" name="SignatureKey" type="type_ASCII">
+	            </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="TransactionRecord99_0_6">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 6}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+		        <xsd:element dfdl:length="6" dfdl:lengthKind="explicit" name="PrescriptionId" type="type_PI">
+			    </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_7">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 7}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+			    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="BalanceDueSignIndicator" type="type_PI">
+		 		</xsd:element>
+      			<xsd:element   minOccurs="0" name="BalanceDue" type="type_PD">
+		        </xsd:element>
+      			<xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="TotalAmountSignIndicator" type="type_PI">
+		        </xsd:element>
+      			<xsd:element   minOccurs="0" name="TotalAmount" type="type_PD">
+			    </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_8">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 8}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+		        <xsd:element   name="PumpId" type="type_PD">
+			    </xsd:element>
+      			<xsd:element   minOccurs="0" name="NetUnitPrice" type="type_PD">
+		        </xsd:element>
+      			<xsd:element   minOccurs="0" name="NetXPrice" type="type_PD">
+		        </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_9">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 9}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+		        <xsd:element   name="ItemSubTypeValue" type="type_PD">
+		        </xsd:element>
+      			<xsd:element  minOccurs="0" name="ItemSubTypeData" type="type_ASCII">
+			    </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_10">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 10}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+		        <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="Indicat0" type="type_PI">
+		        </xsd:element>
+      			<xsd:element   name="Quantity" type="type_PD">
+			    </xsd:element>
+      			<xsd:element   name="ItemCode" type="type_PD">
+			    </xsd:element>
+		        <xsd:element   name="RainCheckPrice" type="type_PD">
+		        </xsd:element>
+		        <xsd:element   name="OriginalPrice" type="type_PD">
+		        </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_11">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 11}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+      			<xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="BarCodeType" type="type_PI">
+			    </xsd:element>
+		        <xsd:element name="BarCodeData" type="type_ASCII">
+		        </xsd:element>
+		        <xsd:element   minOccurs="0" name="PrimaryPurchaseQuantity" type="type_PL">
+		        </xsd:element>
+		        <xsd:element   minOccurs="0" name="secondaryPurchaseQuantity" type="type_PL">
+		        </xsd:element>
+		        <xsd:element   minOccurs="0" name="TertiaryPurchaseQuantity" type="type_PL">
+		        </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_21">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 21}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element   name="PromotionServiceId" type="type_ASCII">
+		        </xsd:element>
+            	<xsd:element  name="PromotionServiceCoupon" type="type_ASCII">
+		        </xsd:element>
+          		<xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="DiscountType" type="type_PI">
+			    </xsd:element>
+            	<xsd:element   name="DiscountTypeValue" type="type_PI">
+	            </xsd:element>
+    	        <xsd:element   minOccurs="0" name="PromotionServiceUserData" type="type_PI">
+		        </xsd:element>
+          	    <xsd:element   name="MatchingItemTotal" type="type_PI">
+		        </xsd:element>
+            	<xsd:element   name="MatchingItemOrdinalNumber" type="type_PI">
+		        </xsd:element>
+            	<xsd:element   name="MatchingItemDiscountAmount" type="type_PI">
+		        </xsd:element>
+            	<xsd:element   name="MatchingItemPrice" type="type_PI">
+			    </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+	<!-- No custom user fields because of unbounded repeating data at end -->
+    <xsd:element name="TransactionRecord99_0_22">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 22}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" name="MatchingItems">
+                  <xsd:complexType>
+                    <xsd:sequence>
+		            	<xsd:element   name="MatchingItemOrdinalNumber" type="type_PI">
+				        </xsd:element>
+        		    	<xsd:element   name="MatchingItemDiscountAmount" type="type_PI">
+		    		    </xsd:element>
+            			<xsd:element   name="MatchingItemPrice" type="type_PI">
+			    		</xsd:element>
+			    	</xsd:sequence>
+			      </xsd:complexType>
+			    </xsd:element>	
+             </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="TransactionRecord99_0_50">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 50}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="RefundReason" type="type_PD">
+	            </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="TransactionRecord99_0_51">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 51}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="PriceOverrideReason" type="type_PD">
+	            </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="TransactionRecord99_0_52">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 52}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+      			<xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="VoidReason" type="type_PD">
+		        </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="TransactionRecord99_0_60">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 60}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+		        <xsd:element maxOccurs="unbounded" minOccurs="0" name="UserData" type="type_ASCII">
+		        </xsd:element>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="TransactionRecord99_0_70">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 70}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+		        <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="ActionFlag" type="type_PD">
+		        </xsd:element>
+      			<xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="DataSourceFlag" type="type_PD">
+			    </xsd:element>
+      			<xsd:element dfdl:length="2" dfdl:lengthKind="explicit" name="Controller" type="type_ASCII">
+		        </xsd:element>
+      			<xsd:element dfdl:length="2" dfdl:lengthKind="explicit" name="OriginalTerminalID" type="type_PD">
+			    </xsd:element>
+			    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="OriginalTransactionNumber" type="type_PI">
+		        </xsd:element>
+      			<xsd:element dfdl:length="5" dfdl:lengthKind="explicit" name="DateTime" type="type_PD">
+		        </xsd:element>
+      			<xsd:element   name="GrossPositive" type="type_PL">
+		        </xsd:element>
+      			<xsd:element   name="GrossNegative" type="type_PL">
+		        </xsd:element>
+      			<xsd:element  minOccurs="0" name="UserData" type="type_ASCII">
+		        </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_78">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 78}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element   name="ItemCode" type="type_PD">
+	            </xsd:element>
+    	        <xsd:element   name="DiscountRate" type="type_PD">
+	            </xsd:element>
+    	        <xsd:element   name="OriginalPrice" type="type_PD">
+		        </xsd:element>
+        	    <xsd:element   name="SoldAtPrice" type="type_PD">
+	            </xsd:element>
+    	        <xsd:element   minOccurs="0" name="DiscountGroupNumber" type="type_PD">
+	            </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_79">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 79}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element   name="ItemCode" type="type_PD">
+	            </xsd:element>
+    	        <xsd:element   name="DiscountRate" type="type_PD">
+	            </xsd:element>
+    	        <xsd:element   name="OriginalPrice" type="type_PD">
+		        </xsd:element>
+        	    <xsd:element   name="SoldAtPrice" type="type_PD">
+	            </xsd:element>
+    	        <xsd:element   minOccurs="0" name="DepartmentNumber" type="type_PD">
+	            </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_80">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 80}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element name="Prescription" type="type_ASCII">
+		        </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_81">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 81}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element dfdl:length="36" dfdl:lengthKind="explicit" name="ErrorResponse">
+		          <xsd:complexType>
+        		    <xsd:sequence dfdl:separator="">
+        				<xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="Type" type="type_ASCII">
+				        </xsd:element>
+ 				        <xsd:element dfdl:length="2" dfdl:lengthKind="explicit" name="AgencyId" type="type_ASCII">
+				      	</xsd:element>
+				        <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="PANLength" type="type_ASCII">
+				        </xsd:element>
+        				<xsd:element dfdl:length="10" dfdl:lengthKind="explicit" name="PAN" type="type_ASCII">
+				        </xsd:element>
+        				<xsd:element dfdl:length="4" dfdl:lengthKind="explicit" name="ErrorCode" type="type_ASCII">
+				        </xsd:element>
+        				<xsd:element dfdl:length="15" dfdl:lengthKind="explicit" name="IssuingAgency" type="type_ASCII">
+				        </xsd:element>
+        				<xsd:element dfdl:length="3" dfdl:lengthKind="explicit" name="ICCSignature" type="type_ASCII">
+				        </xsd:element>
+      				</xsd:sequence>
+      			  </xsd:complexType>
+      			</xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord99_0_96">
+        <xsd:complexType>
+            <xsd:sequence>
+           		<!--
+           		<xsd:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xsd:element> 
+           		-->
+           	    <xsd:element   name="Originator" type="type_PI">
+                </xsd:element>
+           	    <xsd:element   name="SubType" type="type_PI">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 96}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+	            <xsd:element dfdl:length="2" dfdl:lengthKind="explicit" name="Plan" type="type_ASCII">
+	            </xsd:element>
+    	        <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="AccountType" type="type_PI">
+	            </xsd:element>
+    	        <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="RequestType" type="type_PI">
+	            </xsd:element>
+    	        <xsd:element   name="Amount" type="type_PL">
+	            </xsd:element>
+    	        <xsd:element dfdl:length="5" dfdl:lengthKind="explicit" name="Sequence" type="type_PL">
+	            </xsd:element>
+    	        <xsd:element dfdl:length="12" dfdl:lengthKind="explicit" name="DateTime" type="type_ASCII">
+	            </xsd:element>
+    	        <xsd:element  name="AccountNumber" type="type_ASCII">
+	            </xsd:element>
+    	        <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="EntryMethod" type="type_PI">
+	            </xsd:element>
+    	        <xsd:element dfdl:length="8" minOccurs="0" name="UserField" type="type_PS">
+	            </xsd:element>
+    	        <xsd:element   minOccurs="0" name="Track1" type="type_PS">
+	            </xsd:element>
+    	        <xsd:element   minOccurs="0" name="Track2" type="type_PS">
+	            </xsd:element>
+    	        <xsd:element   minOccurs="0" name="Track3" type="type_PS">
+	            </xsd:element>
+	            <xsd:element minOccurs="0" name="ApprovalCode" type="type_PS">
+	            </xsd:element>
+	            <xsd:element   minOccurs="0" name="ApprovalCodeSource" type="type_ASCII">
+	            </xsd:element>
+    	        <xsd:element   minOccurs="0" name="ResponseCode" type="type_PI">
+	            </xsd:element>
+	            <xsd:element   minOccurs="0" name="Flags" type="type_PS">
+		        </xsd:element>
+            	<xsd:element   minOccurs="0" name="PromotionServiceId" type="type_PS">
+		        </xsd:element>
+          		<xsd:element  minOccurs="0" name="PromotionServiceGiftCardId" type="type_PS">
+		        </xsd:element>
+          	    <xsd:element  minOccurs="0" name="LotteryItemRRN" type="type_PS">
+			    </xsd:element>
+            	<xsd:element  minOccurs="0" name="LotteryPlayerNumber" type="type_PS">
+		        </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+
+	<!-- Group for all 20 records --> 
+	<!-- Note that all 20 records use the alternative field separator -->        
+	<!-- All 20 records discriminate on SubStringType, some also on Originator and SubType -->
+	<!-- When testKind 'pattern' supported we will use that instead --> 
+    <xsd:group name="choice_20">
+        <xsd:choice dfdl:encoding="ISO-8859-1" dfdl:initiator="%#x20;:">
+	                <xsd:element ref="TransactionRecord20_01">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_02">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_03">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_04">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_05">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_06">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_07">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_08">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_09">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_11">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_12">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_13">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_14">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_15">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_16">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_17">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_18">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_19">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_82">
+					</xsd:element>
+    	            <xsd:element ref="TransactionRecord20_83">
+					</xsd:element>
+    	            					<!-- Custom 20 records -->
+			        <xsd:group ref="choice_20_Custom">
+		            </xsd:group>
+    	            <xsd:element ref="TransactionRecord20_XX">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{fn:true()}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+       	    </xsd:choice>
+    </xsd:group>
+
+
+	<!-- Catch-all record for 20 -->
+    <xsd:element name="TransactionRecord20_XX">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="SubStringType" type="type_PS">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="CustomUserField" type="type_PS"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_01">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="01" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('01')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ItemCode" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat0" type="type_1ByteBitField">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat1" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Amount" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="SaleMeasure" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="FileDeal" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="FilePrice" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="EnteredReasonCode" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="VoidReasonCode" type="type_PD">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="AltPrice" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="BarCode" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_02">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="02" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('02')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="DiscountAmount" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="DiscountTaxExemptAmount" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="DiscountRate" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="DiscountGroup" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="PreferredCustomer" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element  minOccurs="0" name="TaxExemptID" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_03">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="03" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('03')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TenderType" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TenderVariety" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Account" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="AmountTender" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="AmountBalance" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="PreferredCustomer" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_04">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="04" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('04')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="VoidAmount" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="VoidTransactionReasonCode" type="type_PD">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_05">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="05" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('05')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat0" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat1" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TenderAmount" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_06">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="06" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('06')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat0" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TenderType" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_07">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="07" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('07')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Type" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="NumberOfTransactions" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="GrossPositive" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="GrossNegative" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="NumberOfPriceChanges" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_08">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="08" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('08')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ItemCode" type="type_PS">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat0" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="BarCode" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_09">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="09" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('09')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="ItemCode" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="NewDealQuantity" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="NewPrice" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="OldDealQuantity" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="OldPrice" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Batch" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_11">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="11" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('11')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat0" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Password1" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Password2" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_12">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="12" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('12')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat0" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="TransactionData" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_13">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="13" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('13')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat0" type="type_ASCII">
+                </xsd:element>
+				<xsd:group ref="sequence_20Amounts"/>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_14">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="14" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('14')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat0" type="type_ASCII">
+                </xsd:element>
+				<xsd:group ref="sequence_20Amounts"/>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_15">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="15" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('15')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat0" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat1" type="type_1ByteBitField"/>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_16">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="16" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('16')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat0" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_17">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="17" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('17')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat0" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_18">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="18" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('18')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Indicat0" type="type_ASCII">
+                </xsd:element>
+				<xsd:group ref="sequence_20Amounts"/>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_19">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="19" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('19')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="UserData" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="EntryMethod" type="type_ASCII">
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Reserved" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_82">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="82" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('82')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="PreferredCustomer" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="TransactionRecord20_83">
+        <xsd:complexType>
+            <xsd:sequence dfdl:separator="&quot;:&quot;">
+				<xsd:group ref="sequence_20Common"/>
+           	    <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="83" name="SubStringType" type="type_PS">
+						<xsd:annotation>
+							<xsd:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('830')}</dfdl:discriminator>
+							</xsd:appinfo>
+						</xsd:annotation>
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Operator" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Override" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Reason" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Index" type="type_PD">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="Initials" type="type_ASCII">
+                </xsd:element>
+                <xsd:element   minOccurs="0" name="UserExit" type="type_ASCII">
+                </xsd:element>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xsd:sequence>
+		</xsd:complexType>
+    </xsd:element>
+
+
+	<!-- Beware non-standard extra '00' ahead of SubType, consumed as a Reserved field --> 
+    
+    </xsd:schema>
