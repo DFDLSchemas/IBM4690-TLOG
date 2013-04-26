@@ -3,7 +3,7 @@ IBM4690-TLOG
 
 DFDL schemas for Transaction Log data emitted by Toshiba Commerce Solutions (formerly IBM) 4690 point-of-sale devices. There are DFDL schemas for:
 
-    ACE - SurePos ACE v7r3 and earlier
+    ACE - SurePos ACE v7r3 
     GSA - General Sales Application (coming soon)
     SA - Supermarket Application (coming soon)
 
@@ -21,7 +21,8 @@ A DFDL schema that contains DFDL-annotated data types for all the main types def
 
 TlogAce.xsd
 -----------
-A DFDL schema providing a model for all ACE transaction records defined in the ACE programming reference.
+A DFDL schema providing a model for all ACE transaction records defined in the ACE programming reference. Releases up to and including v7r3 are supported.
+
 
 TlogCommon.xsd
 --------------
