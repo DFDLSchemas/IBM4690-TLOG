@@ -1,230 +1,237 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- ******************************************************************
-	* Permission has been granted to IBM by Toshiba Global Commerce Solutions to publish the 
-	* following schema which contains material derived from the SurePOS Application Client/Server 
-	* Environment for 4690 OS, Version 7 Release 3 Programming Reference. 
-	* 
-	* Toshiba Global Commerce Solutions and IBM hereby grant permission, to those obtaining a copy 
-	* of these materials to use, copy and modify the materials solely for use in DFDL processors. 
-	* THESE MATERIALS ARE PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND.  
-	* 
-	* © Copyright Toshiba Global Commerce Solutions, 2013 
-	* 
-	* © Copyright International Business Machines Corporation, 2013. 
-	* 
-	*****************************************************************************************************
-	* Version 1.0 	TlogAceTypes.xsd
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ******************************************************************
+	* Permission has been granted to IBM by Toshiba Global Commerce Solutions to publish the
+	* following schema which contains material derived from the SurePOS Application Client/Server
+	* Environment for 4690 OS, Version 7 Release 3 Programming Reference.
+	*
+	* Toshiba Global Commerce Solutions and IBM hereby grant permission, to those obtaining a copy
+	* of these materials to use, copy and modify the materials solely for use in DFDL processors.
+	* THESE MATERIALS ARE PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND.
+	*
+	* © Copyright Toshiba Global Commerce Solutions, 2013
+	*
+	* © Copyright International Business Machines Corporation, 2013.
+	*
+	*********************************************************************
+	* Version 1.1 	TlogAceTypes.xsd
 	*
 	* This DFDL schema is supplied by IBM. It provides a set of types
 	* to assist in the creation of DFDL schemas that model
 	* 4690 point-of-sale transaction log (TLog) data (ACE format).
 	* 
-	******************************************************************* --><xsd:schema xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/TlogAceFormat" xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	******************************************************************* -->
+<xs:schema xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
+           xmlns:fmt="http://www.ibm.com/dfdl/TlogAceFormat" 
+           xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" 
+           xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:fn="http://www.w3.org/2005/xpath-functions">
 
-        
-            <xsd:import namespace="http://www.ibm.com/dfdl/TlogAceFormat" schemaLocation="TlogAceFormat.xsd"/>
-    <xsd:annotation>
-		<xsd:appinfo source="http://www.ogf.org/dfdl/">
+    <xs:import namespace="http://www.ibm.com/dfdl/TlogAceFormat" schemaLocation="TlogAceFormat.xsd"/>
+
+    <xs:annotation>
+		<xs:appinfo source="http://www.ogf.org/dfdl/">
 			<dfdl:format ref="fmt:TlogAceFormat"/>
-		</xsd:appinfo>
-	</xsd:annotation>
+		</xs:appinfo>
+	</xs:annotation>
 
-    <xsd:complexType name="type_4ByteBitField_Desc">
-      <xsd:sequence>
-        <xsd:element name="Bits_31_0" type="xsd:decimal"/>
+    <xs:complexType name="type_4ByteBitField_Desc">
+      <xs:sequence>
+        <xs:element name="Bits_31_0" type="xs:decimal"/>
 		<!-- Interpreted as
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit31" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit30" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit29" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit28" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit27" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit26" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit25" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit24" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit23" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit22" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit21" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit20" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit19" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit18" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit17" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit16" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit15" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit14" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit13" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit12" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit11" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit10" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit9" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit8" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit7" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit6" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit5" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit4" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit3" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit2" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit1" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit0" type="xsd:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit31" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit30" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit29" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit28" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit27" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit26" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit25" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit24" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit23" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit22" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit21" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit20" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit19" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit18" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit17" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit16" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit15" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit14" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit13" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit12" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit11" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit10" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit9" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit8" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit7" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit6" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit5" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit4" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit3" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit2" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit1" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit0" type="xs:boolean"/>
         -->
-    </xsd:sequence>
-  </xsd:complexType>
+    </xs:sequence>
+  </xs:complexType>
   
-    <xsd:complexType name="type_2ByteBitField_ByteReversedLittleIndian">
-      <xsd:sequence>
-        <xsd:element name="Bits_0_15_LittleEndian" type="xsd:decimal"/>
+    <xs:complexType name="type_2ByteBitField_ByteReversedLittleIndian">
+      <xs:sequence>
+        <xs:element name="Bits_0_15_LittleEndian" type="xs:decimal"/>
 		<!-- Interpreted as	
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit8" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit9" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit10" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit11" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit12" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit13" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit14" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit15" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit0" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit1" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit2" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit3" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit4" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit5" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit6" type="xsd:boolean"/>
-        <xsd:element maxOccurs="1" minOccurs="0" name="Bit7" type="xsd:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit8" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit9" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit10" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit11" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit12" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit13" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit14" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit15" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit0" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit1" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit2" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit3" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit4" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit5" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit6" type="xs:boolean"/>
+        <xs:element maxOccurs="1" minOccurs="0" name="Bit7" type="xs:boolean"/>
         -->
-    </xsd:sequence>
-  </xsd:complexType>
+    </xs:sequence>
+  </xs:complexType>
 
-    <xsd:complexType name="type_4ByteBitField">
-        <xsd:sequence>
-        	<xsd:element name="Bits_0_31" type="xsd:decimal"/>
+    <xs:complexType name="type_4ByteBitField">
+        <xs:sequence>
+        	<xs:element name="Bits_0_31" type="xs:decimal"/>
 			<!-- Interpreted as
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit0" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit1" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit2" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit3" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit4" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit5" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit6" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit7" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit8" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit9" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit10" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit11" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit12" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit13" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit14" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit15" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit16" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit17" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit18" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit19" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit20" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit21" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit22" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit23" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit24" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit25" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit26" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit27" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit28" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit29" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit30" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit31" type="xsd:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit0" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit1" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit2" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit3" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit4" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit5" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit6" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit7" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit8" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit9" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit10" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit11" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit12" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit13" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit14" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit15" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit16" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit17" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit18" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit19" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit20" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit21" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit22" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit23" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit24" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit25" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit26" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit27" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit28" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit29" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit30" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit31" type="xs:boolean"/>
             -->
-        </xsd:sequence>
-    </xsd:complexType>
+        </xs:sequence>
+    </xs:complexType>
     
-    <xsd:complexType name="type_3ByteBitField">
-        <xsd:sequence>
-        	<xsd:element name="Bits_0_23" type="xsd:decimal"/>
+    <xs:complexType name="type_3ByteBitField">
+        <xs:sequence>
+        	<xs:element name="Bits_0_23" type="xs:decimal"/>
         	<!-- Interpreted as 
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit0" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit1" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit2" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit3" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit4" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit5" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit6" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit7" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit8" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit9" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit10" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit11" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit12" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit13" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit14" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit15" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit16" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit17" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit18" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit19" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit20" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit21" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit22" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit23" type="xsd:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit0" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit1" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit2" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit3" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit4" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit5" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit6" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit7" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit8" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit9" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit10" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit11" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit12" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit13" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit14" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit15" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit16" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit17" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit18" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit19" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit20" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit21" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit22" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit23" type="xs:boolean"/>
             -->
-        </xsd:sequence>
-    </xsd:complexType>
+        </xs:sequence>
+    </xs:complexType>
     
-    <xsd:complexType name="type_1ByteBitField">
-        <xsd:sequence>
-        	<xsd:element name="Bits_0_7" type="xsd:decimal"/>
+    <xs:complexType name="type_1ByteBitField">
+        <xs:sequence>
+        	<xs:element name="Bits_0_7" type="xs:decimal"/>
         	<!-- Interpreted as
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit0" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit1" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit2" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit3" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit4" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit5" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit6" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit7" type="xsd:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit0" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit1" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit2" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit3" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit4" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit5" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit6" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit7" type="xs:boolean"/>
             -->
-        </xsd:sequence>
-    </xsd:complexType>
+        </xs:sequence>
+    </xs:complexType>
 
-    <xsd:complexType name="type_2ByteBitField">
-        <xsd:sequence>
-        	<xsd:element name="Bits_0_15" type="xsd:decimal"/>
+    <xs:complexType name="type_2ByteBitField">
+        <xs:sequence>
+        	<xs:element name="Bits_0_15" type="xs:decimal"/>
         	<!-- Interpreted as
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit0" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit1" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit2" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit3" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit4" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit5" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit6" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit7" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit8" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit9" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit10" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit11" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit12" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit13" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit14" type="xsd:boolean"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="Bit15" type="xsd:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit0" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit1" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit2" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit3" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit4" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit5" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit6" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit7" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit8" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit9" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit10" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit11" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit12" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit13" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit14" type="xs:boolean"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Bit15" type="xs:boolean"/>
             -->
-        </xsd:sequence>
-    </xsd:complexType>
+        </xs:sequence>
+    </xs:complexType>
     
                   
-  	<xsd:simpleType name="type_PD">
-  		<xsd:restriction base="xsd:decimal"/>
-  	</xsd:simpleType>
+  	<xs:simpleType name="type_PD">
+  		<xs:restriction base="xs:decimal"/>
+  	</xs:simpleType>
   	
   	  	
-  	<xsd:simpleType name="type_PL">
-  		<xsd:restriction base="xsd:long"/>
-  	</xsd:simpleType>
+  	<xs:simpleType name="type_PL">
+  		<xs:restriction base="xs:long"/>
+  	</xs:simpleType>
   	
-  	<xsd:simpleType name="type_PI">
-  		<xsd:restriction base="xsd:int"/>
-  	</xsd:simpleType>
+  	<xs:simpleType name="type_PI">
+  		<xs:restriction base="xs:int"/>
+  	</xs:simpleType>
   	
-  	<xsd:simpleType name="type_PS">
-  		<xsd:restriction base="xsd:hexBinary"/>
-  	</xsd:simpleType>
+  	<xs:simpleType name="type_PS">
+  		<xs:restriction base="xs:hexBinary"/>
+  	</xs:simpleType>
   	
-  	<xsd:simpleType dfdl:representation="text" name="type_ASCII">
-  		<xsd:restriction base="xsd:string"/>
-  	</xsd:simpleType>
+  	<xs:simpleType dfdl:representation="text" name="type_ASCII">
+  		<xs:restriction base="xs:string"/>
+  	</xs:simpleType>
   	
   	
-</xsd:schema>
+</xs:schema>
