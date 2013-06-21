@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- ******************************************************************
+<?xml version="1.0" encoding="UTF-8"?><!-- ******************************************************************
 	* Permission has been granted to IBM by Toshiba Global Commerce Solutions to publish the
 	* following schema which contains material derived from the SurePOS Application Client/Server
 	* Environment for 4690 OS, Version 7 Release 3 Programming Reference.
@@ -19,13 +18,7 @@
 	* to assist in the creation of DFDL schemas that model
 	* 4690 point-of-sale transaction log (TLog) data (ACE format).
 	* 
-	******************************************************************* -->
-<xs:schema xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
-           xmlns:fmt="http://www.ibm.com/dfdl/TlogAceFormat" 
-           xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" 
-           xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" 
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:fn="http://www.w3.org/2005/xpath-functions">
+	******************************************************************* --><xs:schema xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/TlogAceFormat" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
     <xs:import namespace="http://www.ibm.com/dfdl/TlogAceFormat" schemaLocation="TlogAceFormat.xsd"/>
 
@@ -75,7 +68,7 @@
     </xs:sequence>
   </xs:complexType>
   
-    <xs:complexType name="type_2ByteBitField_ByteReversedLittleIndian">
+    <xs:complexType name="type_2ByteBitField_ByteReversedLittleEndian">
       <xs:sequence>
         <xs:element name="Bits_0_15_LittleEndian" type="xs:decimal"/>
 		<!-- Interpreted as	

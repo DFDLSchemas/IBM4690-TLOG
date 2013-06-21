@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- ******************************************************************
+<?xml version="1.0" encoding="UTF-8"?><!-- ******************************************************************
 	* Permission has been granted to IBM by Toshiba Global Commerce Solutions to publish the
 	* following schema which contains material derived from the SurePOS Application Client/Server
 	* Environment for 4690 OS, Version 7 Release 3 Programming Reference.
@@ -24,14 +23,7 @@
 	* Some record types have sub-types which are discriminated either using
 	* initiators or discriminators.
 	* 
-	******************************************************************* -->
-<xs:schema xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
-            xmlns:fmt="http://www.ibm.com/dfdl/TlogAceFormat" 
-            xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" 
-            xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" 
-            xmlns:xs="http://www.w3.org/2001/XMLSchema"
-            xmlns:fn="http://www.w3.org/2005/xpath-functions"
-            >
+	******************************************************************* --><xs:schema xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/TlogAceFormat" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
         
   <xs:include schemaLocation="TlogAceTypes.xsd"/>
@@ -191,7 +183,7 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="Indicat1" type="type_4ByteBitField_Desc">
                 </xs:element>
-                <xs:element minOccurs="0" name="Indicat2" type="type_2ByteBitField_ByteReversedLittleIndian">                                 
+                <xs:element minOccurs="0" name="Indicat2" type="type_2ByteBitField_ByteReversedLittleEndian">                                 
                 </xs:element>
                 <xs:element dfdl:occursCountKind="implicit" maxOccurs="1" minOccurs="0" name="Indicat3" type="type_PS">
                 </xs:element>
@@ -610,7 +602,7 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="Indicat1" type="type_4ByteBitField_Desc">
                 </xs:element>
-                <xs:element minOccurs="0" name="Indicat2" type="type_2ByteBitField_ByteReversedLittleIndian">
+                <xs:element minOccurs="0" name="Indicat2" type="type_2ByteBitField_ByteReversedLittleEndian">
                 </xs:element>
                 <xs:element minOccurs="0" name="Indicat3" type="type_PD">
                 </xs:element>
