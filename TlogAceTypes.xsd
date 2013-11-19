@@ -13,7 +13,12 @@
 	* © Copyright International Business Machines Corporation, 2013.
 	*
 	*********************************************************************
-	* Version 1.1 	TlogAceTypes.xsd
+	* Version 1.2 	TlogAceTypes.xsd
+	*
+	* Change History
+	* 1.2: Create type_String to model ACE spec type 'String' used in 99_0_96
+	*
+	********************************************************************* 
 	*
 	* This DFDL schema is supplied by IBM. It provides a set of types
 	* to assist in the creation of DFDL schemas that model
@@ -230,6 +235,10 @@
   	</xs:simpleType>
   	
   	<xs:simpleType dfdl:representation="text" name="type_ASCII">
+  		<xs:restriction base="xs:string"/>
+  	</xs:simpleType>
+  	
+  	<xs:simpleType dfdl:representation="text" dfdl:encoding="ISO-8859-1" name="type_String">
   		<xs:restriction base="xs:string"/>
   	</xs:simpleType>
   	

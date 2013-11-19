@@ -13,7 +13,13 @@
 	* © Copyright International Business Machines Corporation, 2013.
 	*
 	*********************************************************************
-	* Version 1.1 	TlogAce.xsd
+	* Version 1.2 	TlogAce.xsd
+	*
+	* Change History
+	* 1.2: Correct 99_0_06 PrescriptionId to be variable length
+	*      Correct 99_0_96 fields from type_PS to type_String
+	*
+	********************************************************************* 
 	*
 	* This DFDL schema is supplied by IBM. It provides a DFDL model for
 	* 4690 point-of-sale transaction log (TLog) data (ACE format).
@@ -1351,7 +1357,7 @@
 							</xs:appinfo>
 						</xs:annotation>
                 </xs:element>
-		        <xs:element dfdl:length="6" dfdl:lengthKind="explicit" name="PrescriptionId" type="type_PI">
+		        <xs:element minOccurs="0" name="PrescriptionId" type="type_PI">
 			    </xs:element>
                 <xs:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
             </xs:sequence>
@@ -1861,29 +1867,29 @@
 	            </xs:element>
     	        <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="EntryMethod" type="type_PI">
 	            </xs:element>
-    	        <xs:element dfdl:length="8" minOccurs="0" name="UserField" type="type_PS">
+    	        <xs:element dfdl:length="8" minOccurs="0" name="UserField" type="type_String">
 	            </xs:element>
-    	        <xs:element minOccurs="0" name="Track1" type="type_PS">
+    	        <xs:element minOccurs="0" name="Track1" type="type_String">
 	            </xs:element>
-    	        <xs:element minOccurs="0" name="Track2" type="type_PS">
+    	        <xs:element minOccurs="0" name="Track2" type="type_String">
 	            </xs:element>
-    	        <xs:element minOccurs="0" name="Track3" type="type_PS">
+    	        <xs:element minOccurs="0" name="Track3" type="type_String">
 	            </xs:element>
-	            <xs:element minOccurs="0" name="ApprovalCode" type="type_PS">
+	            <xs:element minOccurs="0" name="ApprovalCode" type="type_String">
 	            </xs:element>
-	            <xs:element minOccurs="0" name="ApprovalCodeSource" type="type_ASCII">
+	            <xs:element minOccurs="0" name="ApprovalCodeSource" type="type_String">
 	            </xs:element>
     	        <xs:element minOccurs="0" name="ResponseCode" type="type_PI">
 	            </xs:element>
-	            <xs:element minOccurs="0" name="Flags" type="type_PS">
+	            <xs:element minOccurs="0" name="Flags" type="type_String">
 		        </xs:element>
-            	<xs:element minOccurs="0" name="PromotionServiceId" type="type_PS">
+            	<xs:element minOccurs="0" name="PromotionServiceId" type="type_String">
 		        </xs:element>
-          		<xs:element minOccurs="0" name="PromotionServiceGiftCardId" type="type_PS">
+          		<xs:element minOccurs="0" name="PromotionServiceGiftCardId" type="type_String">
 		        </xs:element>
-          	    <xs:element minOccurs="0" name="LotteryItemRRN" type="type_PS">
+          	    <xs:element minOccurs="0" name="LotteryItemRRN" type="type_String">
 			    </xs:element>
-            	<xs:element minOccurs="0" name="LotteryPlayerNumber" type="type_PS">
+            	<xs:element minOccurs="0" name="LotteryPlayerNumber" type="type_String">
 		        </xs:element>
                 <xs:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
             </xs:sequence>
