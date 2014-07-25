@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ******************************************************************
+	* Permission has been granted to IBM by Toshiba Global Commerce Solutions to publish the
+	* following schema which contains material derived from the SurePOS Application Client/Server
+	* Environment for 4690 OS, Version 7 Release 4 Programming Reference.
+	*
+	* Toshiba Global Commerce Solutions and IBM hereby grant permission, to those obtaining a copy
+	* of these materials to use, copy and modify the materials solely for use in DFDL processors.
+	* THESE MATERIALS ARE PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND.
+	*
+	* © Copyright Toshiba Global Commerce Solutions, 2013
+	*
+	* © Copyright International Business Machines Corporation, 2014.
+	*
+	*********************************************************************
+	* Version 1.2 	TlogAceFormat.xsd
+	*
+	* Change History
+	* 1.2: Updates to support v7r4 (prolog comments only)
+	*
+	* This DFDL schema is supplied by IBM. It provides a set of DFDL property values
+	* and other DFDL constructs to assist in the creation of DFDL schemas that model
+	* 4690 point-of-sale transaction log (TLog) data (ACE format).
+	* 
+	* 
+	* Example use: 
+	* 
+	*      <xs:import namespace="http://www.ibm.com/dfdl/TlogAceFormat" schemaLocation="TlogAceFormat.xsd"/>
+	******************************************************************* -->
+<xs:schema targetNamespace="http://www.ibm.com/dfdl/TlogAceFormat" 
+           xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
+           xmlns:tns="http://www.ibm.com/dfdl/TlogAceFormat" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:fn="http://www.w3.org/2005/xpath-functions"
+           >
+
+	<xs:annotation>
+		<xs:appinfo source="http://www.ogf.org/dfdl/">
+
+			<!-- Defaults for TLOG ACE data -->
+			<!-- Most fields are binary ibm4690Packed rep -->
+			<!-- Default separator is a colon -->			
+			<dfdl:defineFormat name="TlogAceFormat">
+				<dfdl:format alignment="1" alignmentUnits="bytes" binaryBooleanFalseRep="0" binaryBooleanTrueRep="1" binaryCalendarRep="ibm4690Packed" binaryDecimalVirtualPoint="0" binaryFloatRep="ieee" binaryNumberCheckPolicy="strict" binaryNumberRep="ibm4690Packed" binaryPackedSignCodes="C D F C" byteOrder="bigEndian" calendarCenturyStart="53" calendarCheckPolicy="lax" calendarDaysInFirstWeek="4" calendarFirstDayOfWeek="Monday" calendarLanguage="en-US" calendarObserveDST="yes" calendarPattern="yyyyMMddHHmmss" calendarPatternKind="explicit" calendarTimeZone="UTC" choiceLengthKind="implicit" decimalSigned="yes" documentFinalTerminatorCanBeMissing="no" emptyValueDelimiterPolicy="none" encoding="US-ASCII" escapeSchemeRef="" fillByte="%#r00;" floating="no" ignoreCase="no" initiatedContent="no" initiator="" leadingSkip="0" lengthKind="delimited" lengthUnits="bytes" nilKind="literalValue" nilValueDelimiterPolicy="none" occursCountKind="implicit" outputNewLine="%CR;%LF;" prefixIncludesPrefixLength="no" representation="binary" separator=":" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" terminator="" textBidi="no" textBooleanFalseRep="%#r01;" textBooleanJustification="left" textBooleanPadCharacter="%SP;" textBooleanTrueRep="%#r00;" textCalendarJustification="left" textCalendarPadCharacter="0" textNumberCheckPolicy="lax" textNumberJustification="right" textNumberPadCharacter="0" textNumberRep="standard" textNumberRounding="pattern" textNumberRoundingMode="roundUp" textPadKind="none" textStandardBase="10" textStandardDecimalSeparator="." textStandardExponentCharacter="E" textStandardGroupingSeparator="," textStandardInfinityRep="Inf" textStandardNaNRep="NaN" textStandardZeroRep="" textStringJustification="left" textStringPadCharacter="%SP;" textTrimKind="none" textZonedSignStyle="asciiStandard" trailingSkip="0" truncateSpecifiedLengthString="no" useNilForDefault="no" utf16Width="fixed">
+				</dfdl:format>
+			</dfdl:defineFormat>
+
+		</xs:appinfo>
+	</xs:annotation>
+
+</xs:schema>
