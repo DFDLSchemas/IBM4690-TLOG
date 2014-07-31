@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- ******************************************************************
+	* Permission has been granted to IBM by Toshiba Global Commerce Solutions to publish the
+	* following schema which contains material derived from the Supermarket Application 
+	* Programming Guide.
+	*
+	* Toshiba Global Commerce Solutions and IBM hereby grant permission, to those obtaining a copy
+	* of these materials to use, copy and modify the materials solely for use in DFDL processors.
+	* THESE MATERIALS ARE PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND.
+	*
+	* © Copyright Toshiba Global Commerce Solutions, 2014
+	*
+	* © Copyright International Business Machines Corporation, 2014.
+	*
+	*********************************************************************
+	* Version 1.0 	TlogSACommon.xsd
+	*
+	* This DFDL schema is supplied by IBM. It provides common DFDL components for
+	* 4690 point-of-sale transaction log (TLog) data (SA format).
+	*
+	******************************************************************* --><xs:schema targetNamespace="http://www.ibm.com/dfdl/Tlog/SA" xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/TlogSAFormat" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:sa="http://www.ibm.com/dfdl/Tlog/SA" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        
+  <xs:include schemaLocation="TlogSATypes.xsd"/>
+  <xs:import namespace="http://www.ibm.com/dfdl/TlogSAFormat" schemaLocation="TlogSAFormat.xsd"/>
+
+    <xs:annotation>
+		<xs:appinfo source="http://www.ogf.org/dfdl/">
+			<dfdl:format ref="fmt:TlogSAFormat"/>
+		</xs:appinfo>
+	</xs:annotation>
+    
+
+	<!-- Common for 13 and 97_13 -->
+    <!-- Tenders is unbounded with end indicated by Negative field (value 95 to 99) so we use a discriminator to look at the value of TenderType. --> 
+    <!-- When we get 95 to 99 we have gone off the end so we back out. -->
+    <!-- For this to work we must set separatorPolicy to 'suppressed' because what we have here is non-positional data. --> 
+	<xs:group name="sequence_13Tenders">  
+		<xs:sequence dfdl:separatorPolicy="suppressed">
+    	            <xs:element maxOccurs="unbounded" minOccurs="0" name="Tenders">
+								<xs:annotation>
+									<xs:appinfo source="http://www.ogf.org/dfdl/">
+										<dfdl:discriminator>{./TenderType lt 95}</dfdl:discriminator>
+									</xs:appinfo>
+								</xs:annotation>
+        	        	<xs:complexType>
+		    	            <xs:sequence>
+                	            <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="TenderType" type="sa:type_PI">
+                    	        </xs:element>
+                        	    <xs:element minOccurs="0" name="TenderAmount" type="sa:type_PL">
+                            	</xs:element>
+                        	</xs:sequence>
+                    	</xs:complexType>
+                	</xs:element>    
+                <xs:element name="Negative" type="sa:type_PD">
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="NegativeTenders">
+                	<xs:complexType>
+		                <xs:sequence>
+                            <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="NegativeTenderType" type="sa:type_PI">
+                            </xs:element>
+                            <xs:element minOccurs="0" name="NegativeTenderAmount" type="sa:type_PL">
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>    
+            </xs:sequence>
+	</xs:group>
+
+	<!-- Common fields at the start of all 20 records --> 
+    <xs:group name="sequence_20Common">
+            <xs:sequence dfdl:separator="&quot;:&quot;">
+           		<!--
+           		<xs:element dfdl:inputValueCalc="{xs:hexBinary('20')}" name="StringType" type="sa:type_PS">
+           		</xs:element> 
+           		-->
+                <xs:element dfdl:length="2" dfdl:lengthKind="explicit" name="TerminalNumber" type="sa:type_PS">
+                </xs:element>
+                <xs:element dfdl:length="2" dfdl:lengthKind="explicit" name="TransactionNumber" type="sa:type_PS">
+                </xs:element>
+                <xs:element dfdl:length="5" dfdl:lengthKind="explicit" name="DateTime" type="sa:type_PD">
+                </xs:element>
+            </xs:sequence>
+    </xs:group>
+
+	<!-- Common fields for 20 record amounts --> 
+	<xs:group name="sequence_20Amounts">
+		<xs:sequence dfdl:separator="&quot;:&quot;">
+                <xs:element minOccurs="0" name="AmountCash" type="sa:type_ASCII">
+                </xs:element>
+                <xs:element minOccurs="0" name="AmountCheck" type="sa:type_ASCII">
+                </xs:element>
+                <xs:element minOccurs="0" name="AmountFoodStamps" type="sa:type_ASCII">
+                </xs:element>
+                <xs:element minOccurs="0" name="AmountMiscellaneous1" type="sa:type_ASCII">
+                </xs:element>
+                <xs:element minOccurs="0" name="AmountMiscellaneous2" type="sa:type_ASCII">
+                </xs:element>
+                <xs:element minOccurs="0" name="AmountMiscellaneous3" type="sa:type_ASCII">
+                </xs:element>
+                <xs:element minOccurs="0" name="AmountManufacturerCoupons" type="sa:type_ASCII">
+                </xs:element>
+                <xs:element minOccurs="0" name="AmountStoreCoupons" type="sa:type_ASCII">
+                </xs:element>
+		</xs:sequence>
+	</xs:group>
+
+	<!-- Common field for all records -->	
+    <xs:element name="CustomUserField" type="sa:type_PS"/>
+
+</xs:schema>

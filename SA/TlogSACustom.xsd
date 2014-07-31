@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- ******************************************************************
+	* Permission has been granted to IBM by Toshiba Global Commerce Solutions to publish the
+	* following schema which contains material derived from the Supermarket Application 
+	* Programming Guide.
+	*
+	* Toshiba Global Commerce Solutions and IBM hereby grant permission, to those obtaining a copy
+	* of these materials to use, copy and modify the materials solely for use in DFDL processors.
+	* THESE MATERIALS ARE PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND.
+	*
+	* © Copyright Toshiba Global Commerce Solutions, 2014
+	*
+	* © Copyright International Business Machines Corporation, 2014.
+	*
+	*********************************************************************
+	* Version 1.0 	TlogSACustom.xsd
+	*
+	* This DFDL schema is supplied by IBM. It provides a DFDL model for
+	* 4690 point-of-sale transaction log (TLog) data (SA format) user extensions.
+	*
+	* The following extension points are available: 
+	* - Completely new transaction records 
+	* - New transaction records in the 11 series
+	* - New transaction records in the 99 series
+	* - New transaction records in the 20 series
+	* Discrimination is either using initiators or discriminators.
+	* 
+	******************************************************************* --><xs:schema targetNamespace="http://www.ibm.com/dfdl/Tlog/SA" xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/TlogSAFormat" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:sa="http://www.ibm.com/dfdl/Tlog/SA" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:include schemaLocation="TlogSATypes.xsd"/>
+    <xs:import namespace="http://www.ibm.com/dfdl/TlogSAFormat" schemaLocation="TlogSAFormat.xsd"/>
+    <xs:include schemaLocation="TlogSACommon.xsd"/>
+
+    <xs:annotation>
+		<xs:appinfo source="http://www.ogf.org/dfdl/">
+			<dfdl:format ref="fmt:TlogSAFormat"/>
+		</xs:appinfo>
+	</xs:annotation>
+    
+	<!-- Group for all completely new custom records --> 
+    <xs:group name="choice_Custom">
+				<xs:choice>	
+					<!-- Insert elements here -->
+					 
+					<!--  If we get here ensure choice fails -->
+					<xs:sequence>
+						<xs:annotation>
+							<xs:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:assert>{fn:false()}</dfdl:assert>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:sequence>
+        	    </xs:choice>
+    </xs:group>
+
+	<!-- Group for custom 11 records --> 
+	<!-- Custom 11 records are expected to discriminate on SubStringType -->
+	<!-- When testKind 'pattern' supported, we will use that instead -->
+    <xs:group name="choice_11_Custom">
+				<xs:choice>
+					<!-- Insert elements here -->
+	                <xs:element ref="sa:TransactionRecord11_BD">
+					</xs:element>
+					<!--  If we get here ensure choice fails -->
+					<xs:sequence>
+						<xs:annotation>
+							<xs:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:assert>{fn:false()}</dfdl:assert>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:sequence>
+        	    </xs:choice>
+    </xs:group>
+
+    <xs:element name="TransactionRecord11_BD">
+        <xs:complexType>
+            <xs:sequence>
+           		<!--
+           		<xs:element dfdl:inputValueCalc="{xs:hexBinary('11')}" name="StringType" type="sa:type_PS">
+           		</xs:element> 
+           		-->
+           	    <xs:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="BD" name="SubStringType" type="sa:type_PS">
+						<xs:annotation>
+							<xs:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{. eq xs:hexBinary('BD')}</dfdl:discriminator>
+							</xs:appinfo>
+						</xs:annotation>
+                </xs:element>
+		        <xs:element minOccurs="0" name="VoidIndicator" type="sa:type_ASCII">
+        		</xs:element>
+		        <xs:element minOccurs="0" name="ItemUPC" type="sa:type_PD">
+                </xs:element>
+		        <xs:element minOccurs="0" name="ItemValue" type="sa:type_PD">
+		        </xs:element>
+		        <xs:element minOccurs="0" name="ItemDepartment" type="sa:type_PD">
+		        </xs:element>
+        		<xs:element minOccurs="0" name="CouponCode" type="sa:type_PD">
+		        </xs:element>
+        		<xs:element minOccurs="0" name="CouponValue" type="sa:type_PD">
+		        </xs:element>
+        		<xs:element minOccurs="0" name="CouponDepartment" type="sa:type_PD">
+		        </xs:element>
+        		<xs:element minOccurs="0" name="ReportingCode" type="sa:type_PD">
+		        </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" ref="sa:CustomUserField"/>
+            </xs:sequence>
+		</xs:complexType>
+    </xs:element>
+
+	<!-- Group for all custom 99 records --> 
+	<!-- Insert elements before the sequence --> 
+	<!-- All 99 records discriminate on Originator and SubType -->
+	<!-- When testKind 'pattern' supported, we will use that instead -->
+	<!-- Dummy example supplied -->
+	<xs:group name="choice_99_Custom">
+				<xs:choice>	
+    	            <xs:element ref="sa:TransactionRecord99_99_99">
+					</xs:element>
+					<!--  Ensure choice fails -->
+					<xs:sequence>
+						<xs:annotation>
+							<xs:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:assert>{fn:false()}</dfdl:assert>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:sequence>
+        	    </xs:choice>
+    </xs:group>
+
+    <xs:element name="TransactionRecord99_99_99">
+        <xs:complexType>
+            <xs:sequence>
+           		<!--
+           		<xs:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="sa:type_PS">
+           		</xs:element> 
+           		-->
+           	    <xs:element name="Originator" type="sa:type_PI">
+                </xs:element>
+           	    <xs:element name="SubType" type="sa:type_PI">
+						<xs:annotation>
+							<xs:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 99 and . eq 99}</dfdl:discriminator>
+							</xs:appinfo>
+						</xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="Field1" type="sa:type_PD">
+		        </xs:element>
+                <xs:element minOccurs="0" name="Field2" type="sa:type_ASCII">
+		        </xs:element>
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="sa:CustomUserField"/>
+            </xs:sequence>
+		</xs:complexType>
+    </xs:element>
+
+	<!-- Group for all custom 20 records --> 
+	<!-- Note that all 20 records use the alternative field separator -->        
+	<!-- All 20 records discriminate on SubStringType, some also on Originator and SubType --> 
+	<!-- When testKind 'pattern' supported, we will use that instead -->
+	<!-- Dummy example supplied -->
+	<xs:group name="choice_20_Custom">
+        <xs:choice>
+					<!-- Insert elements here -->
+	                <xs:element ref="sa:TransactionRecord20_89_99_99">
+					</xs:element>
+					<!--  If we get here ensure choice fails -->
+					<xs:sequence>
+						<xs:annotation>
+							<xs:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:assert>{fn:false()}</dfdl:assert>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:sequence>
+   	    </xs:choice>
+    </xs:group>
+
+    <xs:element name="TransactionRecord20_89_99_99">
+        <xs:complexType>
+            <xs:sequence dfdl:separator="&quot;:&quot;">
+				<xs:group ref="sa:sequence_20Common"/>
+           	    <xs:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="89" name="SubStringType" type="sa:type_PS">
+						<xs:annotation>
+							<xs:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:assert>{. eq xs:hexBinary('89')}</dfdl:assert>
+							</xs:appinfo>
+						</xs:annotation>
+                </xs:element>
+                <xs:element dfdl:length="{5}" minOccurs="0" name="Operator" type="sa:type_PD">
+                </xs:element>
+           	    <xs:element dfdl:length="{1}" name="Originator" type="sa:type_PD">
+                </xs:element>
+           	    <xs:element dfdl:length="{1}" fixed="99" name="SubType" type="sa:type_PD">
+						<xs:annotation>
+							<xs:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 99 and . eq 99}</dfdl:discriminator>
+							</xs:appinfo>
+						</xs:annotation>
+                </xs:element>
+	            <xs:element minOccurs="0" name="Field1" type="sa:type_PD">
+    	        </xs:element>
+	            <xs:element minOccurs="0" name="Field2" type="sa:type_ASCII">
+    	        </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" ref="sa:CustomUserField"/>
+            </xs:sequence>
+		</xs:complexType>
+    </xs:element>
+
+
+</xs:schema>

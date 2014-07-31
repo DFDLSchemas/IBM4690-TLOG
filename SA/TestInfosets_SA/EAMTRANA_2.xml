@@ -1,0 +1,2738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transactions xmlns="http://www.ibm.com/dfdl/Tlog/SA" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_17 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0001</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">17</SubStringType>
+        <Indicat0 xmlns="" xsi:type="xs:string">2</Indicat0>
+      </TransactionRecord20_17>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_17 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0001</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">17</SubStringType>
+        <Indicat0 xmlns="" xsi:type="xs:string">I</Indicat0>
+      </TransactionRecord20_17>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_17 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0001</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">17</SubStringType>
+        <Indicat0 xmlns="" xsi:type="xs:string">I</Indicat0>
+      </TransactionRecord20_17>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_17 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0001</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">17</SubStringType>
+        <Indicat0 xmlns="" xsi:type="xs:string">I</Indicat0>
+      </TransactionRecord20_17>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_17 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0001</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">17</SubStringType>
+        <Indicat0 xmlns="" xsi:type="xs:string">I</Indicat0>
+      </TransactionRecord20_17>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_11 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0001</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">11</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Indicat0 xmlns="" xsi:type="xs:string">1</Indicat0>
+        <Password1 xmlns="" xsi:type="xs:string">1</Password1>
+      </TransactionRecord20_11>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_17 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0001</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">17</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Indicat0 xmlns="" xsi:type="xs:string">C</Indicat0>
+      </TransactionRecord20_17>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0001</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">88372</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">4</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">7</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">0</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">1</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">0</FileDeal>
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:decimal">19</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">1</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151416</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">8</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">15000</GrossPositive>
+        <RingTime xmlns="" xsi:type="xs:long">1</RingTime>
+        <InactiveTime xmlns="" xsi:type="xs:long">3</InactiveTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">4194313</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_FF xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ff</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <NosaleData xmlns="" xsi:type="xs:hexBinary">f0</NosaleData>
+        <StoreNumber xmlns="" xsi:type="xs:decimal">137</StoreNumber>
+      </TransactionRecord11_FF>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DataEntry xmlns="http://www.ibm.com/dfdl/Tlog/SA"></TransactionRecord11_DataEntry>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">16001</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">15000</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">50</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12297</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord10 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:hexBinary">301319</Reason>
+      </TransactionRecord10>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ce</SubStringType>
+        <ItemCode xmlns="" xsi:type="xs:decimal">88372</ItemCode>
+        <Value xmlns="" xsi:type="xs:decimal">150</Value>
+        <Families xmlns="" xsi:type="xs:decimal">0</Families>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">6</Bits_31_0>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:decimal">78</Indicat3>
+      </TransactionRecord11_CE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_EE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ee</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <Points xmlns="" xsi:type="xs:decimal">0</Points>
+      </TransactionRecord11_EE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">20000</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">5000</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0002</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">80050</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">4</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">7</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">0</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">1</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">0</FileDeal>
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:decimal">19</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0002</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">80050</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">4</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">7</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">0</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">1</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">0</FileDeal>
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:decimal">19</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0002</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">20145700000</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">3</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">8</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">402</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">150</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">0</FileDeal>
+        <FilePrice xmlns="" xsi:type="xs:string">402</FilePrice>
+        <Reason xmlns="" xsi:type="xs:decimal">0</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">2</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151416</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">24</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">536</GrossPositive>
+        <GrossNegative xmlns="" xsi:type="xs:long">402</GrossNegative>
+        <RingTime xmlns="" xsi:type="xs:long">2</RingTime>
+        <TenderTime xmlns="" xsi:type="xs:long">1</TenderTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">4194329</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_FF xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ff</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <NosaleData xmlns="" xsi:type="xs:hexBinary">f0</NosaleData>
+        <StoreNumber xmlns="" xsi:type="xs:decimal">137</StoreNumber>
+      </TransactionRecord11_FF>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">20145700000</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">134</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">5</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16396</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2050</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">2</MultiPricingGroup>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">268</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">50</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">72</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">20145700000</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">402</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">5</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16396</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2050</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">2</MultiPricingGroup>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">268</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">150</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">72</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord10 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:hexBinary">19</Reason>
+      </TransactionRecord10>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ce</SubStringType>
+        <ItemCode xmlns="" xsi:type="xs:decimal">80050</ItemCode>
+        <Value xmlns="" xsi:type="xs:decimal">100</Value>
+        <Families xmlns="" xsi:type="xs:decimal">0</Families>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">6</Bits_31_0>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:decimal">78</Indicat3>
+      </TransactionRecord11_CE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80051</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">75</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">5</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16397</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2050</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">50</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">150</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">64</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">32</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">50</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord10 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:hexBinary">19</Reason>
+      </TransactionRecord10>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ce</SubStringType>
+        <ItemCode xmlns="" xsi:type="xs:decimal">80050</ItemCode>
+        <Value xmlns="" xsi:type="xs:decimal">100</Value>
+        <Families xmlns="" xsi:type="xs:decimal">0</Families>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">6</Bits_31_0>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:decimal">78</Indicat3>
+      </TransactionRecord11_CE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80051</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">25</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">5</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16397</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2050</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">50</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">50</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">64</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">32</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">50</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ce</SubStringType>
+        <ItemCode xmlns="" xsi:type="xs:decimal">80050</ItemCode>
+        <Value xmlns="" xsi:type="xs:decimal">100</Value>
+        <Families xmlns="" xsi:type="xs:decimal">0</Families>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">6</Bits_31_0>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">128</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:decimal">78</Indicat3>
+      </TransactionRecord11_CE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80051</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">25</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">5</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16397</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2178</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">50</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">50</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">64</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">20145700000</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">402</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">5</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">17420</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2178</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">80</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">2</MultiPricingGroup>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">268</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">150</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">72</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord10 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:hexBinary">19</Reason>
+      </TransactionRecord10>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_EE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ee</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <Points xmlns="" xsi:type="xs:decimal">0</Points>
+        <CouponAmount xmlns="" xsi:type="xs:decimal">75</CouponAmount>
+        <CouponCount xmlns="" xsi:type="xs:decimal">1</CouponCount>
+        <RedeemedPoints xmlns="" xsi:type="xs:decimal">100</RedeemedPoints>
+      </TransactionRecord11_EE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">2000</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">1941</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">3</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151416</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">11</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">294</GrossPositive>
+        <RingTime xmlns="" xsi:type="xs:long">1</RingTime>
+        <TenderTime xmlns="" xsi:type="xs:long">1</TenderTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">25</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">5000016280</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">134</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">500</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">991000</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">128</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2050</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">18</MultiPricingGroup>
+        <DealQuantity xmlns="" xsi:type="xs:decimal">3</DealQuantity>
+        <PricingMethod xmlns="" xsi:type="xs:decimal">1</PricingMethod>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">2</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">89</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">3</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">2</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">3320003004</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">149</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">500</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">991000</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">128</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">28150000000</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">35</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">500</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">4</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">70</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">55000035216</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">50</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">500</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">352000</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12545</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">60</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">50</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">3</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">1</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">128</Bits_0_15>
+        </LogFlags>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">2000</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">1791</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord07 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TaxAAmount xmlns="" xsi:type="xs:long">11</TaxAAmount>
+        <TaxASales xmlns="" xsi:type="xs:long">283</TaxASales>
+      </TransactionRecord07>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0004</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">2500002606</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">2</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">8</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">200</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">1</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">0</FileDeal>
+        <FilePrice xmlns="" xsi:type="xs:string">200</FilePrice>
+        <Reason xmlns="" xsi:type="xs:decimal">0</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0004</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">80042</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">10</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">7</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">118</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">1</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">0</FileDeal>
+        <FilePrice xmlns="" xsi:type="xs:string">0</FilePrice>
+        <Reason xmlns="" xsi:type="xs:decimal">0</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0004</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">2500002606</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">2</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">8</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">200</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">1</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">0</FileDeal>
+        <FilePrice xmlns="" xsi:type="xs:string">200</FilePrice>
+        <Reason xmlns="" xsi:type="xs:decimal">0</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">4</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151416</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">18</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">1036</GrossPositive>
+        <GrossNegative xmlns="" xsi:type="xs:long">400</GrossNegative>
+        <TenderTime xmlns="" xsi:type="xs:long">4</TenderTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">4194329</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_FF xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ff</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <NosaleData xmlns="" xsi:type="xs:hexBinary">f0</NosaleData>
+        <StoreNumber xmlns="" xsi:type="xs:decimal">137</StoreNumber>
+      </TransactionRecord11_FF>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">2500002606</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">200</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">13</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">1</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">2500002606</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">200</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">13</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">1</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">2500002606</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">200</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">13</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">1</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">2500002606</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">200</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">13</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">1</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">4152000252</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">118</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">13</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">1</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80042</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">118</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">13</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">128</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">42</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">4152000252</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">118</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">13</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">1</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80042</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">118</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">13</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">128</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">42</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">2500002606</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">200</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">13</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">1036</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">129</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">80</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80042</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">118</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">13</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">9229</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">128</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">71</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">2500002606</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">200</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">13</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">1036</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">128</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">80</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CC xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">cc</SubStringType>
+        <ManufacturerCouponAmount xmlns="" xsi:type="xs:decimal">0</ManufacturerCouponAmount>
+        <StoreCouponAmount xmlns="" xsi:type="xs:decimal">118</StoreCouponAmount>
+        <ManufacturerCouponCount xmlns="" xsi:type="xs:decimal">0</ManufacturerCouponCount>
+        <StoreCouponCount xmlns="" xsi:type="xs:decimal">1</StoreCouponCount>
+      </TransactionRecord11_CC>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_EE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ee</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <Points xmlns="" xsi:type="xs:decimal">0</Points>
+        <CouponAmount xmlns="" xsi:type="xs:decimal">118</CouponAmount>
+        <CouponCount xmlns="" xsi:type="xs:decimal">1</CouponCount>
+      </TransactionRecord11_EE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">2000</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">1482</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0005</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">2900000331</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">2</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">8</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">59</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">2</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">2</FileDeal>
+        <FilePrice xmlns="" xsi:type="xs:string">59</FilePrice>
+        <Reason xmlns="" xsi:type="xs:decimal">13</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">5</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151416</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">22</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">1148</GrossPositive>
+        <GrossNegative xmlns="" xsi:type="xs:long">59</GrossNegative>
+        <RingTime xmlns="" xsi:type="xs:long">1</RingTime>
+        <InactiveTime xmlns="" xsi:type="xs:long">1</InactiveTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">4194329</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_FF xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ff</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <NosaleData xmlns="" xsi:type="xs:hexBinary">f0</NosaleData>
+        <StoreNumber xmlns="" xsi:type="xs:decimal">137</StoreNumber>
+      </TransactionRecord11_FF>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">2900000331</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">148</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2051</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">2</MultiPricingGroup>
+        <DealQuantity xmlns="" xsi:type="xs:decimal">5</DealQuantity>
+        <PricingMethod xmlns="" xsi:type="xs:decimal">1</PricingMethod>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">2</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">59</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">5</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">32</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">10</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">1000</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">10</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">39</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">10</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">39</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">10</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">39</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">9</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">39</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">9</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">39</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">2900000331</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">59</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">1036</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2179</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">80</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">2</MultiPricingGroup>
+        <DealQuantity xmlns="" xsi:type="xs:decimal">3</DealQuantity>
+        <PricingMethod xmlns="" xsi:type="xs:decimal">1</PricingMethod>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">2</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">59</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">2</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">32</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">10</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">128</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">9</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">128</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CC xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">cc</SubStringType>
+        <ManufacturerCouponAmount xmlns="" xsi:type="xs:decimal">0</ManufacturerCouponAmount>
+        <StoreCouponAmount xmlns="" xsi:type="xs:decimal">29</StoreCouponAmount>
+        <ManufacturerCouponCount xmlns="" xsi:type="xs:decimal">0</ManufacturerCouponCount>
+        <StoreCouponCount xmlns="" xsi:type="xs:decimal">3</StoreCouponCount>
+      </TransactionRecord11_CC>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_EE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ee</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <Points xmlns="" xsi:type="xs:decimal">0</Points>
+        <CouponAmount xmlns="" xsi:type="xs:decimal">29</CouponAmount>
+        <CouponCount xmlns="" xsi:type="xs:decimal">3</CouponCount>
+      </TransactionRecord11_EE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">2000</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">940</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0006</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151416</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">20438300000</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">3</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">8</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">787</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">26</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">0</FileDeal>
+        <FilePrice xmlns="" xsi:type="xs:string">787</FilePrice>
+        <Reason xmlns="" xsi:type="xs:decimal">0</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">6</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151416</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">23</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">2361</GrossPositive>
+        <GrossNegative xmlns="" xsi:type="xs:long">787</GrossNegative>
+        <TenderTime xmlns="" xsi:type="xs:long">1</TenderTime>
+        <InactiveTime xmlns="" xsi:type="xs:long">1</InactiveTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">4194329</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_FF xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ff</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <NosaleData xmlns="" xsi:type="xs:hexBinary">f0</NosaleData>
+        <StoreNumber xmlns="" xsi:type="xs:decimal">137</StoreNumber>
+      </TransactionRecord11_FF>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">20438300000</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">1574</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">32</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">991000</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16392</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2051</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">2</MultiPricingGroup>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">2999</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">52</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">72</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80017</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">10</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">32</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16397</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2050</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">20</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">52</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">64</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">16</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ce</SubStringType>
+        <ItemCode xmlns="" xsi:type="xs:decimal">80016</ItemCode>
+        <Value xmlns="" xsi:type="xs:decimal">52</Value>
+        <Families xmlns="" xsi:type="xs:decimal">0</Families>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">6</Bits_31_0>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2048</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:decimal">79</Indicat3>
+      </TransactionRecord11_CE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">20438300000</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">787</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">32</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">991000</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16392</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2051</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">2</MultiPricingGroup>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">2999</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">26</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">72</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80017</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">5</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">32</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16397</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2050</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">20</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">26</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">64</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">16</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ce</SubStringType>
+        <ItemCode xmlns="" xsi:type="xs:decimal">80016</ItemCode>
+        <Value xmlns="" xsi:type="xs:decimal">26</Value>
+        <Families xmlns="" xsi:type="xs:decimal">0</Families>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">6</Bits_31_0>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2048</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:decimal">79</Indicat3>
+      </TransactionRecord11_CE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">20438300000</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">787</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">32</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">991000</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">17416</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2179</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">80</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">2</MultiPricingGroup>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">2999</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">26</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">72</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80017</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">5</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">32</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16397</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2178</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">20</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">26</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">64</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ce</SubStringType>
+        <ItemCode xmlns="" xsi:type="xs:decimal">80016</ItemCode>
+        <Value xmlns="" xsi:type="xs:decimal">26</Value>
+        <Families xmlns="" xsi:type="xs:decimal">0</Families>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">6</Bits_31_0>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2176</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:decimal">79</Indicat3>
+      </TransactionRecord11_CE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord10 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:hexBinary">22</Reason>
+      </TransactionRecord10>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CC xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">cc</SubStringType>
+        <ManufacturerCouponAmount xmlns="" xsi:type="xs:decimal">0</ManufacturerCouponAmount>
+        <StoreCouponAmount xmlns="" xsi:type="xs:decimal">10</StoreCouponAmount>
+        <ManufacturerCouponCount xmlns="" xsi:type="xs:decimal">0</ManufacturerCouponCount>
+        <StoreCouponCount xmlns="" xsi:type="xs:decimal">1</StoreCouponCount>
+      </TransactionRecord11_CC>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_EE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ee</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <Points xmlns="" xsi:type="xs:decimal">52</Points>
+        <CouponAmount xmlns="" xsi:type="xs:decimal">10</CouponAmount>
+        <CouponCount xmlns="" xsi:type="xs:decimal">1</CouponCount>
+        <BonusPoints xmlns="" xsi:type="xs:decimal">52</BonusPoints>
+      </TransactionRecord11_EE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">2000</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">436</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0007</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151417</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">20353000000</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">3</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">8</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">800</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">503</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">0</FileDeal>
+        <FilePrice xmlns="" xsi:type="xs:string">800</FilePrice>
+        <Reason xmlns="" xsi:type="xs:decimal">0</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_08 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0007</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151417</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">08</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:hexBinary">f87805</ItemCode>
+        <Indicat0 xmlns="" xsi:type="xs:string">2</Indicat0>
+      </TransactionRecord20_08>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">7</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">15</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">1299</GrossPositive>
+        <GrossNegative xmlns="" xsi:type="xs:long">800</GrossNegative>
+        <RingTime xmlns="" xsi:type="xs:long">2</RingTime>
+        <TenderTime xmlns="" xsi:type="xs:long">2</TenderTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">4194329</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">20353000000</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">800</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">5</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">991000</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16396</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2051</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">2</MultiPricingGroup>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">159</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">503</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">72</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">30573015036</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">499</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">21</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">991000</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">4</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_FF xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ff</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <NosaleData xmlns="" xsi:type="xs:hexBinary">f0</NosaleData>
+        <StoreNumber xmlns="" xsi:type="xs:decimal">137</StoreNumber>
+      </TransactionRecord11_FF>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">87804</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">126</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">5</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16389</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2050</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">25</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">503</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">64</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">7804</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">20353000000</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">800</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">5</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">991000</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">17420</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2179</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">80</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">2</MultiPricingGroup>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">159</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">503</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">72</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">87804</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">126</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">5</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16389</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2178</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">25</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">503</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">64</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord10 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:hexBinary">22</Reason>
+      </TransactionRecord10>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_EE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ee</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <Points xmlns="" xsi:type="xs:decimal">0</Points>
+      </TransactionRecord11_EE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">2000</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">1501</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0008</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151417</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">9874</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">6</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">5</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">-1500</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">1</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">1</FileDeal>
+        <FilePrice xmlns="" xsi:type="xs:string">0</FilePrice>
+        <Override xmlns="" xsi:type="xs:decimal">99</Override>
+        <Reason xmlns="" xsi:type="xs:decimal">5</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">8</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">9</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <RingTime xmlns="" xsi:type="xs:long">1</RingTime>
+        <TenderTime xmlns="" xsi:type="xs:long">1</TenderTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">4194313</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord10 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <Override xmlns="" xsi:type="xs:decimal">99</Override>
+        <Reason xmlns="" xsi:type="xs:hexBinary">05</Reason>
+      </TransactionRecord10>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">9874</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">1500</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">207</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13315</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">50</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">9846</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">600</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">207000</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12291</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">40</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_FF xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ff</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48000049634</CustomerAccountID>
+        <NosaleData xmlns="" xsi:type="xs:hexBinary">f0</NosaleData>
+        <StoreNumber xmlns="" xsi:type="xs:decimal">137</StoreNumber>
+      </TransactionRecord11_FF>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DataEntry xmlns="http://www.ibm.com/dfdl/Tlog/SA"></TransactionRecord11_DataEntry>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord10 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:hexBinary">24</Reason>
+      </TransactionRecord10>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_EE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ee</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48000049634</CustomerAccountID>
+        <Points xmlns="" xsi:type="xs:decimal">0</Points>
+      </TransactionRecord11_EE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">900</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0009</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151417</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">2900000331</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">2</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">8</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">59</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">2</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">2</FileDeal>
+        <FilePrice xmlns="" xsi:type="xs:string">59</FilePrice>
+        <Reason xmlns="" xsi:type="xs:decimal">13</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">9</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">22</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">1148</GrossPositive>
+        <GrossNegative xmlns="" xsi:type="xs:long">59</GrossNegative>
+        <RingTime xmlns="" xsi:type="xs:long">2</RingTime>
+        <TenderTime xmlns="" xsi:type="xs:long">1</TenderTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">4194329</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_FF xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ff</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <NosaleData xmlns="" xsi:type="xs:hexBinary">f0</NosaleData>
+        <StoreNumber xmlns="" xsi:type="xs:decimal">137</StoreNumber>
+      </TransactionRecord11_FF>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">2900000331</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">148</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2051</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">2</MultiPricingGroup>
+        <DealQuantity xmlns="" xsi:type="xs:decimal">5</DealQuantity>
+        <PricingMethod xmlns="" xsi:type="xs:decimal">1</PricingMethod>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">2</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">59</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">5</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">32</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">10</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">1000</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">10</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">39</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">10</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">39</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">10</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">39</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">9</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">39</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">9</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+        <PromotionCode xmlns="" xsi:type="xs:decimal">39</PromotionCode>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">2900000331</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">59</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">1036</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2179</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">80</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">2</MultiPricingGroup>
+        <DealQuantity xmlns="" xsi:type="xs:decimal">3</DealQuantity>
+        <PricingMethod xmlns="" xsi:type="xs:decimal">1</PricingMethod>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">2</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">59</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">2</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">32</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">10</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">128</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">80039</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">9</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">13</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">128</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">73</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CC xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">cc</SubStringType>
+        <ManufacturerCouponAmount xmlns="" xsi:type="xs:decimal">0</ManufacturerCouponAmount>
+        <StoreCouponAmount xmlns="" xsi:type="xs:decimal">29</StoreCouponAmount>
+        <ManufacturerCouponCount xmlns="" xsi:type="xs:decimal">0</ManufacturerCouponCount>
+        <StoreCouponCount xmlns="" xsi:type="xs:decimal">3</StoreCouponCount>
+      </TransactionRecord11_CC>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_EE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ee</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <Points xmlns="" xsi:type="xs:decimal">0</Points>
+        <CouponAmount xmlns="" xsi:type="xs:decimal">29</CouponAmount>
+        <CouponCount xmlns="" xsi:type="xs:decimal">3</CouponCount>
+      </TransactionRecord11_EE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">2000</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">940</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">10</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">5</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">205</GrossPositive>
+        <RingTime xmlns="" xsi:type="xs:long">1</RingTime>
+        <TenderTime xmlns="" xsi:type="xs:long">1</TenderTime>
+        <InactiveTime xmlns="" xsi:type="xs:long">1</InactiveTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">25</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">1800000401</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">205</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">301</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">00</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">51800000020</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">20</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">301</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">264</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">60</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_DD xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">dd</SubStringType>
+        <LogFlags xmlns="">
+          <Bits_0_15 xsi:type="xs:decimal">0</Bits_0_15>
+        </LogFlags>
+      </TransactionRecord11_DD>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">2000</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">1815</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">11</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">16</TransactionType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <InactiveTime xmlns="" xsi:type="xs:long">1</InactiveTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">1</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">12</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">3</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">100</GrossPositive>
+        <InactiveTime xmlns="" xsi:type="xs:long">11</InactiveTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">1</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">990000000015</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">100</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">15</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12296</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">01</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">2000</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">1900</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">13</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">16</TransactionType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <RingTime xmlns="" xsi:type="xs:long">1</RingTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">9</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">14</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">7</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">1000</GrossPositive>
+        <RingTime xmlns="" xsi:type="xs:long">1</RingTime>
+        <InactiveTime xmlns="" xsi:type="xs:long">11</InactiveTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">4194305</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_FF xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ff</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <NosaleData xmlns="" xsi:type="xs:hexBinary">f0</NosaleData>
+        <StoreNumber xmlns="" xsi:type="xs:decimal">137</StoreNumber>
+      </TransactionRecord11_FF>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">10</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">1000</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">1</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">12</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">01</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">5</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord06 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">5</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord06>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_EE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ee</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">48151080787</CustomerAccountID>
+        <Points xmlns="" xsi:type="xs:decimal">0</Points>
+      </TransactionRecord11_EE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">2000</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">1000</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">15</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">16</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">1</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">4560130</GrossPositive>
+        <TenderTime xmlns="" xsi:type="xs:long">1</TenderTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">1</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord10 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:hexBinary">35</Reason>
+      </TransactionRecord10>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0016</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151417</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">2500002654</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">2</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">8</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">299</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">1</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">1</FileDeal>
+        <FilePrice xmlns="" xsi:type="xs:string">299</FilePrice>
+        <Reason xmlns="" xsi:type="xs:decimal">31</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">16</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">13</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">1196</GrossPositive>
+        <GrossNegative xmlns="" xsi:type="xs:long">299</GrossNegative>
+        <TenderTime xmlns="" xsi:type="xs:long">1</TenderTime>
+        <InactiveTime xmlns="" xsi:type="xs:long">2</InactiveTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">4194313</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord10 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:hexBinary">31</Reason>
+      </TransactionRecord10>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_FF xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ff</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">44444444444</CustomerAccountID>
+        <NosaleData xmlns="" xsi:type="xs:hexBinary">f0</NosaleData>
+        <StoreNumber xmlns="" xsi:type="xs:decimal">137</StoreNumber>
+      </TransactionRecord11_FF>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">2500002654</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">1196</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">21</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">8</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2051</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">01</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">299</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">4</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">32</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ce</SubStringType>
+        <ItemCode xmlns="" xsi:type="xs:decimal">85054</ItemCode>
+        <Value xmlns="" xsi:type="xs:decimal">1000</Value>
+        <Families xmlns="" xsi:type="xs:decimal">0</Families>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">6</Bits_31_0>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:decimal">79</Indicat3>
+      </TransactionRecord11_CE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ce</SubStringType>
+        <ItemCode xmlns="" xsi:type="xs:decimal">85054</ItemCode>
+        <Value xmlns="" xsi:type="xs:decimal">1000</Value>
+        <Families xmlns="" xsi:type="xs:decimal">0</Families>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">6</Bits_31_0>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:decimal">79</Indicat3>
+      </TransactionRecord11_CE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ce</SubStringType>
+        <ItemCode xmlns="" xsi:type="xs:decimal">85054</ItemCode>
+        <Value xmlns="" xsi:type="xs:decimal">1000</Value>
+        <Families xmlns="" xsi:type="xs:decimal">0</Families>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">6</Bits_31_0>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:decimal">79</Indicat3>
+      </TransactionRecord11_CE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ce</SubStringType>
+        <ItemCode xmlns="" xsi:type="xs:decimal">85054</ItemCode>
+        <Value xmlns="" xsi:type="xs:decimal">1000</Value>
+        <Families xmlns="" xsi:type="xs:decimal">0</Families>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">6</Bits_31_0>
+        </Indicat1>
+        <Indicat3 xmlns="" xsi:type="xs:decimal">79</Indicat3>
+      </TransactionRecord11_CE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">2500002654</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">299</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">21</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">1032</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">129</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">81</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_CE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ce</SubStringType>
+        <ItemCode xmlns="" xsi:type="xs:decimal">85054</ItemCode>
+        <Value xmlns="" xsi:type="xs:decimal">1000</Value>
+        <Families xmlns="" xsi:type="xs:decimal">0</Families>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">6</Bits_31_0>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">128</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:decimal">79</Indicat3>
+      </TransactionRecord11_CE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_EE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ee</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">44444444444</CustomerAccountID>
+        <Points xmlns="" xsi:type="xs:decimal">3000</Points>
+        <BonusPoints xmlns="" xsi:type="xs:decimal">3000</BonusPoints>
+      </TransactionRecord11_EE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">2000</TenderAmount>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord09 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <TenderAmount xmlns="" xsi:type="xs:long">1103</TenderAmount>
+      </TransactionRecord09>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">17</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">16</TransactionType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <InactiveTime xmlns="" xsi:type="xs:long">1</InactiveTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">9</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0018</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151417</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">01</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:decimal">4011</ItemCode>
+        <Indicat0 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">3</Bits_0_7>
+        </Indicat0>
+        <Indicat1 xmlns="" xsi:type="xs:string">8</Indicat1>
+        <Amount xmlns="" xsi:type="xs:string">294</Amount>
+        <SaleMeasure xmlns="" xsi:type="xs:string">499</SaleMeasure>
+        <FileDeal xmlns="" xsi:type="xs:string">1</FileDeal>
+        <FilePrice xmlns="" xsi:type="xs:string">59</FilePrice>
+        <Reason xmlns="" xsi:type="xs:decimal">0</Reason>
+      </TransactionRecord20_01>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_08 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0018</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151417</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">08</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <ItemCode xmlns="" xsi:type="xs:hexBinary">f81005</ItemCode>
+        <Indicat0 xmlns="" xsi:type="xs:string">2</Indicat0>
+      </TransactionRecord20_08>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">18</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">8</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">294</GrossPositive>
+        <GrossNegative xmlns="" xsi:type="xs:long">294</GrossNegative>
+        <RingTime xmlns="" xsi:type="xs:long">1</RingTime>
+        <InactiveTime xmlns="" xsi:type="xs:long">11</InactiveTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">4194305</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord10 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <Override xmlns="" xsi:type="xs:decimal">1</Override>
+        <Reason xmlns="" xsi:type="xs:hexBinary">31</Reason>
+      </TransactionRecord10>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_FF xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ff</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">44999999999</CustomerAccountID>
+        <NosaleData xmlns="" xsi:type="xs:hexBinary">f0</NosaleData>
+        <StoreNumber xmlns="" xsi:type="xs:decimal">137</StoreNumber>
+      </TransactionRecord11_FF>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">4011</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">294</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">11</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">991000</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">16396</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2051</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">01</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">1</MultiPricingGroup>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">59</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">499</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">64</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord01 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <ItemCode xmlns="" xsi:type="xs:decimal">4011</ItemCode>
+        <ExtendedPrice xmlns="" xsi:type="xs:decimal">294</ExtendedPrice>
+        <DepartmentNumber xmlns="" xsi:type="xs:decimal">11</DepartmentNumber>
+        <CouponFamilyNumber xmlns="" xsi:type="xs:decimal">991000</CouponFamilyNumber>
+        <Indicat1 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">17420</Bits_0_15_LittleEndian>
+        </Indicat1>
+        <Indicat2 xmlns="">
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">2179</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xmlns="" xsi:type="xs:hexBinary">81</Indicat3>
+      </TransactionRecord01>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord02 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <MultiPricingGroup xmlns="" xsi:type="xs:decimal">1</MultiPricingGroup>
+        <SaleQuantity xmlns="" xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xmlns="" xsi:type="xs:decimal">59</SalePrice>
+        <QtyOrWgtOrVol xmlns="" xsi:type="xs:decimal">499</QtyOrWgtOrVol>
+        <Indicat1 xmlns="">
+          <Bits_0_7 xsi:type="xs:decimal">64</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord11_EE xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">ee</SubStringType>
+        <CustomerAccountID xmlns="" xsi:type="xs:decimal">44999999999</CustomerAccountID>
+        <Points xmlns="" xsi:type="xs:decimal">0</Points>
+      </TransactionRecord11_EE>
+    </TransactionRecord>
+    <TransactionRecord xmlns="">
+      <TransactionRecord05 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TenderType xmlns="" xsi:type="xs:int">11</TenderType>
+        <Status xmlns="" xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:int">19</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <TransactionType xmlns="" xsi:type="xs:hexBinary">17</TransactionType>
+        <NumberOfStrings xmlns="" xsi:type="xs:decimal">17</NumberOfStrings>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Password xmlns="" xsi:type="xs:decimal">1</Password>
+        <GrossPositive xmlns="" xsi:type="xs:long">25617</GrossPositive>
+        <GrossNegative xmlns="" xsi:type="xs:long">3100</GrossNegative>
+        <InactiveTime xmlns="" xsi:type="xs:long">7</InactiveTime>
+        <Indicat1 xmlns="">
+          <Bits_31_0 xsi:type="xs:decimal">1</Bits_31_0>
+        </Indicat1>
+      </TransactionRecord00>
+    </TransactionRecord>
+  </Transaction>
+  <Transaction>
+    <TransactionRecord xmlns="">
+      <TransactionRecord20_11 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
+        <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
+        <TransactionNumber xmlns="" xsi:type="xs:hexBinary">0019</TransactionNumber>
+        <DateTime xmlns="" xsi:type="xs:decimal">1010151417</DateTime>
+        <SubStringType xmlns="" xsi:type="xs:hexBinary">11</SubStringType>
+        <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
+        <Indicat0 xmlns="" xsi:type="xs:string">3</Indicat0>
+        <Password1 xmlns="" xsi:type="xs:string">1</Password1>
+      </TransactionRecord20_11>
+    </TransactionRecord>
+  </Transaction>
+</Transactions>
