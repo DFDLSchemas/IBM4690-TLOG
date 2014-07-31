@@ -1,38 +1,40 @@
 IBM4690-TLOG
 ============
 
-DFDL schemas for Transaction Log data emitted by Toshiba Commerce Solutions (formerly IBM) 4690 point-of-sale devices. There are DFDL schemas for:
+This GitHub repository holds DFDL schemas that model Transaction Log (Tlog) data emitted by Toshiba Commerce Solutions (formerly IBM) 4690 point-of-sale devices. 
+There are DFDL schemas for the following Tlog variations:
 
     ACE - SurePos ACE v7r4 and earlier
-    GSA - General Sales Application (coming soon)
-    SA - Supermarket Application (coming soon)
-
-More details at the repository web page http://dfdlschemas.github.com/IBM4690-TLOG/.
+    SA - Supermarket Application
 
 To download the repository go to http://dfdlschemas.github.com/IBM4690-TLOG/.
 
-TlogAceFormat.xsd 
------------------
-A DFDL schema that contains default values for DFDL properties that are suitable for ACE data.
-
-TlogAceTypes.xsd
 ----------------
-A DFDL schema that contains DFDL-annotated data types for all the main types defined by the ACE programming reference.
+4690 Tlog messages consist of a number of transactions, each of which comprises one or more transaction records (or 'strings').
+Each transaction starts with x22 and ends with x22x0Dx0A. Transaction records are separated by x22x2Cx22.
+Within a transaction record, each field is typically separated by x3A, though some use x22x3Ax22.
+Fields are either ASCII text, hex binary or a BCD variant specific to 4690 point-of-sale devices, and are fixed or variable length.
+There are many different types of transaction record, and the first field identifies the type.
+Some of the record types have sub-types which are identified by a subsequent field or fields.
 
-TlogAce.xsd
------------
-A DFDL schema providing a model for all ACE transaction records defined in the ACE programming reference. Releases up to and including v7r3 are supported.
+For performance, the record type field is treated as an initiator. Record sub-types are identified using a discriminator on the appropriate field.
 
-TlogACECommon.xsd
---------------
-A DFDL schema that contains common structures used in ACE transaction records.
+4690 Tlogs are invariably customized by each retailer. To allow for this, a customization schema has been supplied
+which contains places where new record types or sub-types can be added. Additionally each record type allows extra fields at the end.
 
-TlogACECustom.xsd
---------------
-A DFDL schema that allows the definition of custom ACE transaction records, such as extra 99 and 20 records.
+The DFDL schemas for 4690 Tlog are in the 'ACE' and 'SA' folders.
 
+Test data and infosets are included.
 
-The DFDL schemas are compatible with IBM DFDL 1.0 and 1.1 releases, as shipped in IBM WebSphere Message Broker 8.0.0.2 onwards and IBM Integration Bus 9.0.0.1 onwards, respectively.
+The DFDL schemas are compatible with IBM DFDL 1.0 and 1.1 releases, as shipped in IBM WebSphere Message Broker 8.0.0.2
+onwards and IBM Integration Bus 9.0.0.1 onwards, respectively.
+
+The ACE schemas do not have a target namespace. The SA schemas have a target namespace. 
+
+----------------
+IBM WebSphere Message Broker and IBM Integration Bus
+
+It is recommended that the ACE and SA folders are imported into separate library projects.
 
 ----------------
 Please observe the copyright notice within each schema.
