@@ -17,10 +17,11 @@ Fields are either ASCII text, hex binary or a BCD variant specific to 4690 point
 There are many different types of transaction record, and the first field identifies the type.
 Some of the record types have sub-types which are identified by a subsequent field or fields.
 
-For performance, the record type field is treated as an initiator. Record sub-types are identified using a discriminator on the appropriate field.
+For performance, the record type field is treated as an initiator. Record sub-types are identified using a discriminator on the appropriate field(s).
 
 4690 Tlogs are invariably customized by each retailer. To allow for this, a customization schema has been supplied
 which contains places where new record types or sub-types can be added. Additionally each record type allows extra fields at the end.
+Any unrecognized records will be parsed with an 'XX' suffix added to the name, so it is easy to search the infoset after a parse. 
 
 The DFDL schemas for 4690 Tlog are in the 'ACE' and 'SA' folders.
 
