@@ -44,176 +44,42 @@
     <xs:complexType name="type_4ByteBitField_Desc">
       <xs:sequence>
         <xs:element name="Bits_31_0" type="xs:decimal"/>
-		<!-- Interpreted as
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit31" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit30" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit29" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit28" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit27" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit26" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit25" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit24" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit23" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit22" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit21" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit20" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit19" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit18" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit17" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit16" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit15" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit14" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit13" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit12" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit11" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit10" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit9" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit8" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit7" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit6" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit5" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit4" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit3" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit2" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit1" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit0" type="xs:boolean"/>
-        -->
-    </xs:sequence>
-  </xs:complexType>
+		<!-- x'00000001' is Bit_31, x'80000000' is Bit_0 -->
+      </xs:sequence>
+    </xs:complexType>
   
     <xs:complexType name="type_2ByteBitField_ByteReversedLittleEndian">
       <xs:sequence>
         <xs:element name="Bits_0_15_LittleEndian" type="xs:decimal"/>
-		<!-- Interpreted as	
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit8" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit9" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit10" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit11" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit12" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit13" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit14" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit15" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit0" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit1" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit2" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit3" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit4" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit5" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit6" type="xs:boolean"/>
-        <xs:element maxOccurs="1" minOccurs="0" name="Bit7" type="xs:boolean"/>
-        -->
-    </xs:sequence>
-  </xs:complexType>
+		<!-- x'0100' is Bit_0, x'8000' is Bit_7, x'0080' is Bit_15, x'0001' is Bit_8  -->
+      </xs:sequence>
+    </xs:complexType>
 
     <xs:complexType name="type_4ByteBitField">
         <xs:sequence>
         	<xs:element name="Bits_0_31" type="xs:decimal"/>
-			<!-- Interpreted as
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit0" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit1" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit2" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit3" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit4" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit5" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit6" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit7" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit8" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit9" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit10" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit11" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit12" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit13" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit14" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit15" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit16" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit17" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit18" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit19" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit20" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit21" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit22" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit23" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit24" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit25" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit26" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit27" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit28" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit29" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit30" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit31" type="xs:boolean"/>
-            -->
+			<!-- x'00000001' is Bit_0, x'80000000' is Bit_31 -->
         </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="type_3ByteBitField">
         <xs:sequence>
         	<xs:element name="Bits_0_23" type="xs:decimal"/>
-        	<!-- Interpreted as 
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit0" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit1" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit2" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit3" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit4" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit5" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit6" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit7" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit8" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit9" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit10" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit11" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit12" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit13" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit14" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit15" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit16" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit17" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit18" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit19" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit20" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit21" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit22" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit23" type="xs:boolean"/>
-            -->
+			<!-- x'000001' is Bit_0, x'800000' is Bit_23 -->
         </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="type_1ByteBitField">
         <xs:sequence>
         	<xs:element name="Bits_0_7" type="xs:decimal"/>
-        	<!-- Interpreted as
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit0" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit1" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit2" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit3" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit4" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit5" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit6" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit7" type="xs:boolean"/>
-            -->
+			<!-- x'01' is Bit_0, x'80' is Bit_7 -->
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="type_2ByteBitField">
         <xs:sequence>
         	<xs:element name="Bits_0_15" type="xs:decimal"/>
-        	<!-- Interpreted as
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit0" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit1" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit2" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit3" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit4" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit5" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit6" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit7" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit8" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit9" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit10" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit11" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit12" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit13" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit14" type="xs:boolean"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="Bit15" type="xs:boolean"/>
-            -->
+			<!-- x'0001' is Bit_0, x'8000' is Bit_15 -->
         </xs:sequence>
     </xs:complexType>
     

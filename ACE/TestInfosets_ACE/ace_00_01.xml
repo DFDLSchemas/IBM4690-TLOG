@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transactions xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <TransactionRecord>
+      <TransactionRecord00>
+        <TerminalNumber xsi:type="xs:hexBinary">0632</TerminalNumber>
+        <TransactionNumber xsi:type="xs:int">2</TransactionNumber>
+        <DateTime xsi:type="xs:int">1120191336</DateTime>
+        <TransactionType xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xsi:type="xs:decimal">16</NumberOfStrings>
+        <Operator xsi:type="xs:decimal">1</Operator>
+        <Password xsi:type="xs:decimal">1</Password>
+        <GrossPositive xsi:type="xs:long">131</GrossPositive>
+        <GrossNegative xsi:type="xs:long">5</GrossNegative>
+        <RingTime xsi:type="xs:long">24</RingTime>
+        <TenderTime xsi:type="xs:long">58</TenderTime>
+        <InactiveTime xsi:type="xs:long">53</InactiveTime>
+        <Indicat1>
+          <Bits_31_0 xsi:type="xs:decimal">4194304</Bits_31_0>
+        </Indicat1>
+        <AltPrice xsi:type="xs:decimal">0</AltPrice>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord>
+      <TransactionRecord01>
+        <ItemCode xsi:type="xs:decimal">811099999998</ItemCode>
+        <ExtendedPrice xsi:type="xs:decimal">25</ExtendedPrice>
+        <DepartmentNumber xsi:type="xs:decimal">0</DepartmentNumber>
+        <CouponFamilyNumber xsi:type="xs:decimal">0</CouponFamilyNumber>
+        <Indicat1>
+          <Bits_31_0 xsi:type="xs:decimal">1409</Bits_31_0>
+        </Indicat1>
+        <Indicat2>
+          <Bits_0_15_LittleEndian xsi:type="xs:decimal">0</Bits_0_15_LittleEndian>
+        </Indicat2>
+        <Indicat3 xsi:type="xs:hexBinary">75</Indicat3>
+        <Indicat4>
+          <Bits_0_31 xsi:type="xs:decimal">0</Bits_0_31>
+        </Indicat4>
+        <OrdinalNumber xsi:type="xs:int">4</OrdinalNumber>
+      </TransactionRecord01>
+    </TransactionRecord>
+  </Transaction>
+</Transactions>

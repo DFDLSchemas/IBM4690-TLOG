@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transactions xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <TransactionRecord>
+      <TransactionRecord00>
+        <TerminalNumber xsi:type="xs:hexBinary">0680</TerminalNumber>
+        <TransactionNumber xsi:type="xs:int">2</TransactionNumber>
+        <DateTime xsi:type="xs:int">1107191336</DateTime>
+        <TransactionType xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xsi:type="xs:decimal">16</NumberOfStrings>
+        <Operator xsi:type="xs:decimal">1</Operator>
+        <Password xsi:type="xs:decimal">1</Password>
+        <GrossPositive xsi:type="xs:long">131</GrossPositive>
+        <GrossNegative xsi:type="xs:long">5</GrossNegative>
+        <RingTime xsi:type="xs:long">24</RingTime>
+        <TenderTime xsi:type="xs:long">58</TenderTime>
+        <InactiveTime xsi:type="xs:long">53</InactiveTime>
+        <Indicat1>
+          <Bits_31_0 xsi:type="xs:decimal">4194304</Bits_31_0>
+        </Indicat1>
+        <AltPrice xsi:type="xs:decimal">0</AltPrice>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord>
+      <TransactionRecord80_01>
+        <Identifier xsi:type="xs:hexBinary">01</Identifier>
+        <AgencyID xsi:type="xs:string">TX</AgencyID>
+        <Category xsi:type="xs:decimal">19</Category>
+        <SubCategory xsi:type="xs:decimal">0</SubCategory>
+        <BenefitQuantity xsi:type="xs:decimal">100</BenefitQuantity>
+        <PurchaseQuantity xsi:type="xs:decimal">0</PurchaseQuantity>
+        <ZeroPurchaseQuantity xsi:type="xs:decimal">1</ZeroPurchaseQuantity>
+        <Cost xsi:type="xs:decimal">0</Cost>
+        <ZeroCost xsi:type="xs:decimal">500</ZeroCost>
+        <TransactionEntryIndex xsi:type="xs:decimal">9</TransactionEntryIndex>
+        <ItemCode xsi:type="xs:decimal">30816</ItemCode>
+        <ZeroChildrenArray xsi:type="xs:hexBinary">0000</ZeroChildrenArray>
+        <Continuation xsi:type="xs:decimal">0</Continuation>
+        <OriginalUPC xsi:type="xs:decimal">104</OriginalUPC>
+        <ItemCodeTypeIndicator xsi:type="xs:string">1</ItemCodeTypeIndicator>
+      </TransactionRecord80_01>
+    </TransactionRecord>
+    <TransactionRecord>
+      <TransactionRecord98></TransactionRecord98>
+    </TransactionRecord>
+    <TransactionRecord>
+      <TransactionRecord98></TransactionRecord98>
+    </TransactionRecord>
+    <TransactionRecord>
+      <TransactionRecord13>
+        <NumberOfLoans xsi:type="xs:int">0</NumberOfLoans>
+        <AmountLoans xsi:type="xs:long">0</AmountLoans>
+        <NumberOfPickups xsi:type="xs:int">0</NumberOfPickups>
+        <AmountPickups xsi:type="xs:long">0</AmountPickups>
+        <Tenders>
+          <TenderType xsi:type="xs:int">71</TenderType>
+          <TenderAmount xsi:type="xs:long">50</TenderAmount>
+        </Tenders>
+        <Tenders>
+          <TenderType xsi:type="xs:int">81</TenderType>
+          <TenderAmount xsi:type="xs:long">100</TenderAmount>
+        </Tenders>
+        <Negative xsi:type="xs:decimal">99</Negative>
+        <NegativeTenders>
+          <NegativeTenderType xsi:type="xs:int">11</NegativeTenderType>
+          <NegativeTenderAmount xsi:type="xs:long">50</NegativeTenderAmount>
+        </NegativeTenders>
+      </TransactionRecord13>
+    </TransactionRecord>
+    <TransactionRecord>
+      <TransactionRecord97_13>
+        <SubStringType xsi:type="xs:hexBinary">13</SubStringType>
+        <Negative xsi:type="xs:decimal">99</Negative>
+        <NegativeTenders>
+          <NegativeTenderType xsi:type="xs:int">11</NegativeTenderType>
+          <NegativeTenderAmount xsi:type="xs:long">50000</NegativeTenderAmount>
+        </NegativeTenders>
+        <NegativeTenders>
+          <NegativeTenderType xsi:type="xs:int">16</NegativeTenderType>
+          <NegativeTenderAmount xsi:type="xs:long">5000</NegativeTenderAmount>
+        </NegativeTenders>
+      </TransactionRecord97_13>
+    </TransactionRecord>
+  </Transaction>
+</Transactions>

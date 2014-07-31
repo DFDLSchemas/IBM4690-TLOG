@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transactions xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <TransactionRecord>
+      <TransactionRecord00>
+        <TerminalNumber xsi:type="xs:hexBinary">0706</TerminalNumber>
+        <TransactionNumber xsi:type="xs:int">179</TransactionNumber>
+        <DateTime xsi:type="xs:int">910151534</DateTime>
+        <TransactionType xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xsi:type="xs:decimal">8</NumberOfStrings>
+        <Operator xsi:type="xs:decimal">706</Operator>
+        <Password xsi:type="xs:decimal">76195985</Password>
+        <GrossPositive xsi:type="xs:long">627</GrossPositive>
+        <GrossNegative xsi:type="xs:long">0</GrossNegative>
+        <RingTime xsi:type="xs:long">170</RingTime>
+        <TenderTime xsi:type="xs:long">14</TenderTime>
+        <SpecialTime xsi:type="xs:long">3240</SpecialTime>
+        <InactiveTime xsi:type="xs:long">132</InactiveTime>
+        <Indicat1>
+          <Bits_31_0 xsi:type="xs:decimal">4194306</Bits_31_0>
+        </Indicat1>
+        <AltPrice xsi:type="xs:decimal">0</AltPrice>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord>
+      <TransactionRecord05>
+        <TenderType xsi:type="xs:int">11</TenderType>
+        <TenderAmount xsi:type="xs:long">627</TenderAmount>
+        <TenderCashingFee xsi:type="xs:long">0</TenderCashingFee>
+        <Status xsi:type="xs:int">0</Status>
+      </TransactionRecord05>
+    </TransactionRecord>
+    <TransactionRecord>
+      <TransactionRecord97_05>
+        <SubStringType xsi:type="xs:hexBinary">05</SubStringType>
+        <TenderAmountForeign xsi:type="xs:decimal">627</TenderAmountForeign>
+      </TransactionRecord97_05>
+    </TransactionRecord>
+  </Transaction>
+</Transactions>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transactions xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <TransactionRecord>
+      <TransactionRecord00>
+        <TerminalNumber xsi:type="xs:hexBinary">0706</TerminalNumber>
+        <TransactionNumber xsi:type="xs:int">158</TransactionNumber>
+        <DateTime xsi:type="xs:int">910141725</DateTime>
+        <TransactionType xsi:type="xs:hexBinary">00</TransactionType>
+        <NumberOfStrings xsi:type="xs:decimal">32</NumberOfStrings>
+        <Operator xsi:type="xs:decimal">706</Operator>
+        <Password xsi:type="xs:decimal">76195985</Password>
+        <GrossPositive xsi:type="xs:long">5548</GrossPositive>
+        <GrossNegative xsi:type="xs:long">0</GrossNegative>
+        <RingTime xsi:type="xs:long">80</RingTime>
+        <TenderTime xsi:type="xs:long">112</TenderTime>
+        <InactiveTime xsi:type="xs:long">3</InactiveTime>
+        <Indicat1>
+          <Bits_31_0 xsi:type="xs:decimal">4194368</Bits_31_0>
+        </Indicat1>
+        <AltPrice xsi:type="xs:decimal">0</AltPrice>
+      </TransactionRecord00>
+    </TransactionRecord>
+    <TransactionRecord>
+      <TransactionRecord02>
+        <MultiPricingGroup xsi:type="xs:decimal">0</MultiPricingGroup>
+        <PricingMethod xsi:type="xs:decimal">0</PricingMethod>
+        <SaleQuantity xsi:type="xs:decimal">1</SaleQuantity>
+        <SalePrice xsi:type="xs:decimal">2399</SalePrice>
+        <QtyOrWgtOrVol xsi:type="xs:decimal">21526</QtyOrWgtOrVol>
+        <Indicat1>
+          <Bits_0_7 xsi:type="xs:decimal">66</Bits_0_7>
+        </Indicat1>
+      </TransactionRecord02>
+    </TransactionRecord>
+    <TransactionRecord>
+      <TransactionRecord03>
+        <DiscountGroup xsi:type="xs:int">2</DiscountGroup>
+        <DiscountRate xsi:type="xs:int">0</DiscountRate>
+        <DiscountAmount xsi:type="xs:long">0</DiscountAmount>
+        <DiscountTaxExemptAmount xsi:type="xs:long">254</DiscountTaxExemptAmount>
+        <TaxableExemptAmount xsi:type="xs:long">5648</TaxableExemptAmount>
+        <TaxExemptAmountA xsi:type="xs:long">254</TaxExemptAmountA>
+        <TaxExemptAmountB xsi:type="xs:long">0</TaxExemptAmountB>
+        <TaxExemptAmountC xsi:type="xs:long">0</TaxExemptAmountC>
+        <TaxExemptAmountD xsi:type="xs:long">0</TaxExemptAmountD>
+        <TaxableExemptAmountA xsi:type="xs:long">5648</TaxableExemptAmountA>
+        <TaxableExemptAmountB xsi:type="xs:long">0</TaxableExemptAmountB>
+        <TaxableExemptAmountC xsi:type="xs:long">0</TaxableExemptAmountC>
+        <TaxableExemptAmountD xsi:type="xs:long">0</TaxableExemptAmountD>
+        <TaxExemptAmountE xsi:type="xs:long">0</TaxExemptAmountE>
+        <TaxExemptAmountF xsi:type="xs:long">0</TaxExemptAmountF>
+        <TaxExemptAmountG xsi:type="xs:long">0</TaxExemptAmountG>
+        <TaxExemptAmountH xsi:type="xs:long">0</TaxExemptAmountH>
+        <TaxableExemptAmountE xsi:type="xs:long">0</TaxableExemptAmountE>
+        <TaxableExemptAmountF xsi:type="xs:long">0</TaxableExemptAmountF>
+        <TaxableExemptAmountG xsi:type="xs:long">0</TaxableExemptAmountG>
+        <TaxableExemptAmountH xsi:type="xs:long">0</TaxableExemptAmountH>
+      </TransactionRecord03>
+    </TransactionRecord>
+    <TransactionRecord>
+      <TransactionRecord07>
+        <TaxASales xsi:type="xs:long">5648</TaxASales>
+      </TransactionRecord07>
+    </TransactionRecord>
+  </Transaction>
+</Transactions>
