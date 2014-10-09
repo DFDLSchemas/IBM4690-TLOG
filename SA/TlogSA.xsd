@@ -12,8 +12,16 @@
 	* © Copyright International Business Machines Corporation, 2014.
 	*
 	*********************************************************************
-	* Version 1.0 	TlogSA.xsd
+	* Version 1.1 	TlogSA.xsd
 	*
+	* Change History
+	* 1.1: Correct 80_01 AgencyId to allow for empty field
+	*      Correct 80_01 Category to allow for empty field
+	*      Correct 80_02 AgencyId to allow for empty field
+	*      Correct 80_03 AgencyId to allow for empty field
+	*      Correct 21 Indicat2 to delimited to avoid bug
+	*
+	********************************************************************* 
 	* This DFDL schema is supplied by IBM. It provides a DFDL model for
 	* 4690 point-of-sale transaction log (TLog) data (SA format).
 	*
@@ -903,9 +911,9 @@
                 </xs:element>
                 <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="Indicat1" type="sa:type_PI">
                 </xs:element>
-                <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="Indicat2" type="sa:type_1ByteBitField">
+                <xs:element name="Indicat2" type="sa:type_1ByteBitField">
                 </xs:element>
-                                                <xs:element maxOccurs="unbounded" minOccurs="0" ref="sa:CustomUserField"/>
+                <xs:element maxOccurs="unbounded" minOccurs="0" ref="sa:CustomUserField"/>
             </xs:sequence>
 		</xs:complexType>
     </xs:element>
@@ -939,9 +947,9 @@
 							</xs:appinfo>
 						</xs:annotation>
                 </xs:element>
-                <xs:element dfdl:length="2" dfdl:lengthKind="explicit" name="AgencyID" type="sa:type_ASCII">
+                <xs:element minOccurs="0" name="AgencyID" type="sa:type_ASCII">
                 </xs:element>
-                <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="Category" type="sa:type_PD">
+                <xs:element minOccurs="0" name="Category" type="sa:type_PD">
                 </xs:element>
                 <xs:element minOccurs="0" name="SubCategory" type="sa:type_PD">
                 </xs:element>
@@ -985,8 +993,8 @@
 								<dfdl:discriminator>{. eq xs:hexBinary('02')}</dfdl:discriminator>
 							</xs:appinfo>
 						</xs:annotation>
-                </xs:element>
-                <xs:element dfdl:length="2" dfdl:lengthKind="explicit" name="AgencyID" type="sa:type_ASCII">
+                </xs:element> 
+                <xs:element minOccurs="0" name="AgencyID" type="sa:type_ASCII">
                 </xs:element>
                 <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="PANLength" type="sa:type_PI">
                 </xs:element>
@@ -1027,7 +1035,7 @@
 							</xs:appinfo>
 						</xs:annotation>
                 </xs:element>
-                <xs:element dfdl:length="2" dfdl:lengthKind="explicit" name="AgencyID" type="sa:type_ASCII">
+                <xs:element minOccurs="0" name="AgencyID" type="sa:type_ASCII">
                 </xs:element>
                 <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="ICCode" type="sa:type_PI">
                 </xs:element>
