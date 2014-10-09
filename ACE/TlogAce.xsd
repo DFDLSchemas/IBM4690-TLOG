@@ -12,7 +12,7 @@
 	* © Copyright International Business Machines Corporation, 2014.
 	*
 	*********************************************************************
-	* Version 1.3 	TlogAce.xsd
+	* Version 1.4 	TlogAce.xsd
 	*
 	* Change History
 	* 1.2: Correct 99_0_06 PrescriptionId to be variable length
@@ -20,6 +20,16 @@
 	* 1.3: Updates to support v7r4
 	*      - Add new 16 Token of type_ASCII
 	*      - Correct 21 AutoPickup to be type_ASCII variable length
+	* 1.4: Correct 80_01 AgencyId to allow for empty field
+	*      Correct 80_01 Category to allow for empty field
+	*      Correct 80_02 AgencyId to allow for empty field
+	*      Correct 80_02 WICSummaryFlag to allow for empty field
+	*      Correct 20_83 discriminator to match x'83' not x'830'
+	*      Correct 99_0_81 Type from type_ASCII to type_PD
+	*      Correct 99_0_81 PANLength from type_ASCII to type_PD
+	*      Correct 99_0_81 PAN from type_ASCII to type_PD
+	*      Correct 99_0_81 ICCSignature from type_ASCII to type_PD
+	*      Correct 21 Indicat2 to delimited to avoid bug
 	*
 	********************************************************************* 
 	*
@@ -885,7 +895,7 @@
                 </xs:element>
                 <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="Indicat1" type="type_PI">
                 </xs:element>
-                <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="Indicat2" type="type_1ByteBitField">
+                <xs:element name="Indicat2" type="type_1ByteBitField">
                 </xs:element>
                 <!-- Corrected in v7r4 -->
                 <xs:element minOccurs="0" name="AutoPickup" type="type_ASCII">
@@ -1022,9 +1032,9 @@
 							</xs:appinfo>
 						</xs:annotation>
                 </xs:element>
-                <xs:element dfdl:length="2" dfdl:lengthKind="explicit" name="AgencyID" type="type_ASCII">
+                <xs:element minOccurs="0" name="AgencyID" type="type_ASCII">
                 </xs:element>
-                <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="Category" type="type_PD">
+                <xs:element minOccurs="0" name="Category" type="type_PD">
                 </xs:element>
                 <xs:element minOccurs="0" name="SubCategory" type="type_PD">
                 </xs:element>
@@ -1073,7 +1083,7 @@
 							</xs:appinfo>
 						</xs:annotation>
                 </xs:element>
-                <xs:element dfdl:length="2" dfdl:lengthKind="explicit" name="AgencyID" type="type_ASCII">
+                <xs:element minOccurs="0" name="AgencyID" type="type_ASCII">
                 </xs:element>
                 <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="PANLength" type="type_PD">
                 </xs:element>
@@ -1095,7 +1105,7 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="TransactionDateTime" type="type_PD">
                 </xs:element>
-                <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="WICSummaryFlag" type="type_PD">
+                <xs:element minOccurs="0" name="WICSummaryFlag" type="type_PD">
                 </xs:element>
                 <xs:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
             </xs:sequence>
@@ -1813,19 +1823,19 @@
 	            <xs:element dfdl:length="36" dfdl:lengthKind="explicit" name="ErrorResponse">
 		          <xs:complexType>
         		    <xs:sequence dfdl:separator="">
-        				<xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="Type" type="type_ASCII">
+        				<xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="Type" type="type_PD">
 				        </xs:element>
  				        <xs:element dfdl:length="2" dfdl:lengthKind="explicit" name="AgencyId" type="type_ASCII">
 				      	</xs:element>
-				        <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="PANLength" type="type_ASCII">
+				        <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="PANLength" type="type_PD">
 				        </xs:element>
-        				<xs:element dfdl:length="10" dfdl:lengthKind="explicit" name="PAN" type="type_ASCII">
+        				<xs:element dfdl:length="10" dfdl:lengthKind="explicit" name="PAN" type="type_PD">
 				        </xs:element>
         				<xs:element dfdl:length="4" dfdl:lengthKind="explicit" name="ErrorCode" type="type_ASCII">
 				        </xs:element>
         				<xs:element dfdl:length="15" dfdl:lengthKind="explicit" name="IssuingAgency" type="type_ASCII">
 				        </xs:element>
-        				<xs:element dfdl:length="3" dfdl:lengthKind="explicit" name="ICCSignature" type="type_ASCII">
+        				<xs:element dfdl:length="3" dfdl:lengthKind="explicit" name="ICCSignature" type="type_PD">
 				        </xs:element>
       				</xs:sequence>
       			  </xs:complexType>
@@ -2570,7 +2580,7 @@
            	    <xs:element dfdl:length="1" dfdl:lengthKind="explicit" fixed="83" name="SubStringType" type="type_PS">
 						<xs:annotation>
 							<xs:appinfo source="http://www.ogf.org/dfdl/">
-								<dfdl:discriminator>{. eq xs:hexBinary('830')}</dfdl:discriminator>
+								<dfdl:discriminator>{. eq xs:hexBinary('83')}</dfdl:discriminator>
 							</xs:appinfo>
 						</xs:annotation>
                 </xs:element>
