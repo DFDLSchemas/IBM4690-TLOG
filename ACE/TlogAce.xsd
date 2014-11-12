@@ -12,7 +12,7 @@
 	* © Copyright International Business Machines Corporation, 2014.
 	*
 	*********************************************************************
-	* Version 1.4 	TlogAce.xsd
+	* Version 1.5 	TlogAce.xsd
 	*
 	* Change History
 	* 1.2: Correct 99_0_06 PrescriptionId to be variable length
@@ -30,7 +30,8 @@
 	*      Correct 99_0_81 PAN from type_ASCII to type_PD
 	*      Correct 99_0_81 ICCSignature from type_ASCII to type_PD
 	*      Correct 21 Indicat2 to delimited to avoid bug
-	*
+	* 1.5: Correct case of 99_0_11 SecondaryPurchaseQuantity
+        *
 	********************************************************************* 
 	*
 	* This DFDL schema is supplied by IBM. It provides a DFDL model for
@@ -1508,7 +1509,7 @@
 		        </xs:element>
 		        <xs:element minOccurs="0" name="PrimaryPurchaseQuantity" type="type_PL">
 		        </xs:element>
-		        <xs:element minOccurs="0" name="secondaryPurchaseQuantity" type="type_PL">
+		        <xs:element minOccurs="0" name="SecondaryPurchaseQuantity" type="type_PL">
 		        </xs:element>
 		        <xs:element minOccurs="0" name="TertiaryPurchaseQuantity" type="type_PL">
 		        </xs:element>
