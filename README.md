@@ -4,7 +4,7 @@ IBM4690-TLOG
 This GitHub repository holds DFDL schemas that model Transaction Log (Tlog) data emitted by Toshiba Commerce Solutions (formerly IBM) 4690 point-of-sale devices. 
 There are DFDL schemas for the following Tlog variations:
 
-    ACE - SurePos ACE v7r4 and earlier
+    ACE - SurePos ACE v7r5 and earlier
     SA - Supermarket Application
 
 To download the repository go to http://dfdlschemas.github.com/IBM4690-TLOG/.

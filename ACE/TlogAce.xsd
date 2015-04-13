@@ -31,7 +31,11 @@
 	*      Correct 99_0_81 ICCSignature from type_ASCII to type_PD
 	*      Correct 21 Indicat2 to delimited to avoid bug
 	* 1.5: Correct case of 99_0_11 SecondaryPurchaseQuantity
-        *
+    * 1.6: Change 20_11 Override from type_PD to type_PS
+    *      Updates to support v7r5
+    *      - Change 01 OrdinalNumber from type_PI to type_PD 
+    *      - Add new 01 VoidedOrdinalNumber of type_PD variable length 
+    *
 	********************************************************************* 
 	*
 	* This DFDL schema is supplied by IBM. It provides a DFDL model for
@@ -209,8 +213,10 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="Indicat4" type="type_4ByteBitField">
                 </xs:element>
-                <xs:element minOccurs="0" name="OrdinalNumber" type="type_PI">
-				</xs:element>
+                <xs:element minOccurs="0" name="OrdinalNumber" type="type_PD">
+		        </xs:element>
+                <xs:element minOccurs="0" name="VoidedOrdinalNumber" type="type_PD">
+		        </xs:element>
 				<xs:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
             </xs:sequence>
 		</xs:complexType>
@@ -2313,7 +2319,7 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="Password2" type="type_ASCII">
                 </xs:element>
-                <xs:element minOccurs="0" name="Override" type="type_PD">
+                <xs:element minOccurs="0" name="Override" type="type_PS">
                 </xs:element>
                 <xs:element minOccurs="0" name="Reason" type="type_PD">
                 </xs:element>
