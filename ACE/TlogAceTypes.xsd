@@ -2,15 +2,15 @@
 <!-- ******************************************************************
 	* Permission has been granted to IBM by Toshiba Global Commerce Solutions to publish the
 	* following schema which contains material derived from the SurePOS Application Client/Server
-	* Environment for 4690 OS, Version 7 Release 4 Programming Reference.
+	* Environment for 4690 OS, Version 7 Release 5 Programming Reference.
 	*
 	* Toshiba Global Commerce Solutions and IBM hereby grant permission, to those obtaining a copy
 	* of these materials to use, copy and modify the materials solely for use in DFDL processors.
 	* THESE MATERIALS ARE PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND.
 	*
-	* © Copyright Toshiba Global Commerce Solutions, 2013
+	* © Copyright Toshiba Global Commerce Solutions, 2015
 	*
-	* © Copyright International Business Machines Corporation, 2014.
+	* © Copyright International Business Machines Corporation, 2015.
 	*
 	*********************************************************************
 	* Version 1.3 	TlogAceTypes.xsd
