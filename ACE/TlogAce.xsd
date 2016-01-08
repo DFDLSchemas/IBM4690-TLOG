@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><!-- ******************************************************************
 	* Permission has been granted to IBM by Toshiba Global Commerce Solutions to publish the
 	* following schema which contains material derived from the SurePOS Application Client/Server
-	* Environment for 4690 OS, Version 7 Release 5 Programming Reference.
+	* Environment for 4690 OS, Version 7 Release 4 Programming Reference.
 	*
 	* Toshiba Global Commerce Solutions and IBM hereby grant permission, to those obtaining a copy
 	* of these materials to use, copy and modify the materials solely for use in DFDL processors.
 	* THESE MATERIALS ARE PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND.
 	*
-	* © Copyright Toshiba Global Commerce Solutions, 2015
+	* © Copyright Toshiba Global Commerce Solutions, 2013
 	*
-	* © Copyright International Business Machines Corporation, 2015.
+	* © Copyright International Business Machines Corporation, 2014.
 	*
 	*********************************************************************
 	* Version 1.5 	TlogAce.xsd
@@ -35,6 +35,10 @@
     *      Updates to support v7r5
     *      - Change 01 OrdinalNumber from type_PI to type_PD 
     *      - Add new 01 VoidedOrdinalNumber of type_PD variable length 
+    * 1.7: Fixed incorrect field names
+    *      - Subcategory in 80_01
+    *      - PromotionServiceCouponID in 99_0_21 
+    *      - DiscountAmount in 99_0_21 
     *
 	********************************************************************* 
 	*
@@ -1043,7 +1047,8 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="Category" type="type_PD">
                 </xs:element>
-                <xs:element minOccurs="0" name="SubCategory" type="type_PD">
+		        <!-- v1.7 - Name corrected -->
+                <xs:element minOccurs="0" name="Subcategory" type="type_PD">
                 </xs:element>
                 <xs:element minOccurs="0" name="BenefitQuantity" type="type_PD">
                 </xs:element>
@@ -1542,11 +1547,13 @@
                 </xs:element>
 	            <xs:element name="PromotionServiceId" type="type_ASCII">
 		        </xs:element>
-            	<xs:element name="PromotionServiceCoupon" type="type_ASCII">
+		        <!-- v1.7 - Name corrected -->
+            	<xs:element name="PromotionServiceCouponID" type="type_ASCII">
 		        </xs:element>
           		<xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="DiscountType" type="type_PI">
 			    </xs:element>
-            	<xs:element name="DiscountTypeValue" type="type_PI">
+		        <!-- v1.7 - Name corrected -->
+            	<xs:element name="DiscountAmount" type="type_PI">
 	            </xs:element>
     	        <xs:element minOccurs="0" name="PromotionServiceUserData" type="type_PI">
 		        </xs:element>
