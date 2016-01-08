@@ -12,7 +12,7 @@
 	* © Copyright International Business Machines Corporation, 2016.
 	*
 	*********************************************************************
-	* Version 1.5 	TlogAce.xsd
+	* Version 1.7 	TlogAce.xsd
 	*
 	* Change History
 	* 1.2: Correct 99_0_06 PrescriptionId to be variable length
