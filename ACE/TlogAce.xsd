@@ -7,12 +7,12 @@
 	* of these materials to use, copy and modify the materials solely for use in DFDL processors.
 	* THESE MATERIALS ARE PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND.
 	*
-	* © Copyright Toshiba Global Commerce Solutions, 2015
+	* © Copyright Toshiba Global Commerce Solutions, 2015, 2016
 	*
-	* © Copyright International Business Machines Corporation, 2016.
+	* © Copyright International Business Machines Corporation, 2015, 2016.
 	*
 	*********************************************************************
-	* Version 1.7 	TlogAce.xsd
+	* Version 1.8 	TlogAce.xsd
 	*
 	* Change History
 	* 1.2: Correct 99_0_06 PrescriptionId to be variable length
@@ -39,6 +39,7 @@
     *      - Subcategory in 80_01
     *      - PromotionServiceCouponID in 99_0_21 
     *      - DiscountAmount in 99_0_21 
+    * 1.8: Corrected 99_0_0 EntryMethod and ShortDate to be minOccurs 0
     *
 	********************************************************************* 
 	*
@@ -51,7 +52,7 @@
 	* Some record types have sub-types which are discriminated either using
 	* initiators or discriminators.
 	* 
-	******************************************************************* --><xs:schema xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/TlogAceFormat" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	******************************************************************* --><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/TlogAceFormat" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
 
         
   <xs:include schemaLocation="TlogAceTypes.xsd"/>
@@ -1250,9 +1251,9 @@
                 </xs:element>
 	            <xs:element name="Date" type="type_ASCII">
 	            </xs:element>
-    	        <xs:element dfdl:length="1" dfdl:lengthKind="explicit" name="EntryMethod" type="type_ASCII">
+    	        <xs:element dfdl:length="1" dfdl:lengthKind="explicit" minOccurs="0" name="EntryMethod" type="type_ASCII">
 		        </xs:element>
-          		<xs:element dfdl:length="8" dfdl:lengthKind="explicit" name="ShortDate" type="type_ASCII">
+          		<xs:element dfdl:length="8" dfdl:lengthKind="explicit" minOccurs="0" name="ShortDate" type="type_ASCII">
 				</xs:element>
 				<xs:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
             </xs:sequence>
