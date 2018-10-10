@@ -34,7 +34,7 @@
     <!-- When we get 95 to 99 we have gone off the end so we back out. -->
     <!-- For this to work we must set separatorPolicy to 'suppressed' because what we have here is non-positional data. --> 
 	<xs:group name="sequence_13Tenders">  
-		<xs:sequence dfdl:separatorPolicy="suppressed">
+		<xs:sequence dfdl:separatorPolicy="suppressed" dfdl:separatorSuppressionPolicy="anyEmpty">
     	            <xs:element maxOccurs="unbounded" minOccurs="0" name="Tenders">
 								<xs:annotation>
 									<xs:appinfo source="http://www.ogf.org/dfdl/">

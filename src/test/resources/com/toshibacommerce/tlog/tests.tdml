@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tdml:testSuite 
+ xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
+ xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ xmlns:ex="http://example.com" 
+ xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
+ defaultConfig="cfg"
+ defaultRoundTrip="twoPass">
+ 
+ <!-- 
+   These tests generally require two pass because of the elimination of 
+   trailing or unnecessary separators in sequence groups.
+  -->
+
+  <tdml:defineConfig name="cfg">
+    <daf:tunables>
+      <daf:unqualifiedPathStepPolicy>noNamespace</daf:unqualifiedPathStepPolicy>
+      <daf:suppressSchemaDefinitionWarnings>
+        deprecatedPropertySeparatorPolicy
+        encodingErrorPolicyError
+        emptyElementPolicyError
+      </daf:suppressSchemaDefinitionWarnings>
+      <daf:emptyElementPolicy>emptySuppressed</daf:emptyElementPolicy>
+    </daf:tunables>
+  </tdml:defineConfig>
+
+  <tdml:parserTestCase name="testTR07_01" root="TransactionRecord07" model="com/toshibacommerce/tlog/xsd/TlogAce.xsd">
+    <tdml:document>
+      <tdml:documentPart type="byte">073a 3a3a 3a3a 5648 3a3a 3a3a 3a3a 3a3a 3a3a 3a</tdml:documentPart>
+    </tdml:document>
+    <tdml:infoset>
+      <tdml:dfdlInfoset>
+          <TransactionRecord07><TaxASales>5648</TaxASales></TransactionRecord07>
+      </tdml:dfdlInfoset>
+    </tdml:infoset>
+  </tdml:parserTestCase>
+  
+   <tdml:parserTestCase name="testACE1" root="Transactions" model="com/toshibacommerce/tlog/xsd/TlogAce.xsd">
+    <tdml:document>
+      <tdml:documentPart type="file">com/toshibacommerce/tlog/ace_00_01.dat</tdml:documentPart>
+    </tdml:document>
+    <tdml:infoset>
+      <tdml:dfdlInfoset type="file">com/toshibacommerce/tlog/ace_00_01.xml</tdml:dfdlInfoset>
+    </tdml:infoset>
+  </tdml:parserTestCase>
+  
+  <tdml:parserTestCase name="testACE2" root="Transactions" model="com/toshibacommerce/tlog/xsd/TlogAce.xsd">
+    <tdml:document>
+      <tdml:documentPart type="file">com/toshibacommerce/tlog/ace_02_03_07.dat</tdml:documentPart>
+    </tdml:document>
+    <tdml:infoset>
+      <tdml:dfdlInfoset type="file">com/toshibacommerce/tlog/ace_02_03_07.xml</tdml:dfdlInfoset>
+    </tdml:infoset>
+  </tdml:parserTestCase>
+  
+  <tdml:parserTestCase name="testACE3" root="Transactions" model="com/toshibacommerce/tlog/xsd/TlogAce.xsd">
+    <tdml:document>
+      <tdml:documentPart type="file">com/toshibacommerce/tlog/ace_05_97-05.dat</tdml:documentPart>
+    </tdml:document>
+    <tdml:infoset>
+      <tdml:dfdlInfoset type="file">com/toshibacommerce/tlog/ace_05_97-05.xml</tdml:dfdlInfoset>
+    </tdml:infoset>
+  </tdml:parserTestCase>
+  
+  <tdml:parserTestCase name="testACE4" root="Transactions" model="com/toshibacommerce/tlog/xsd/TlogAce.xsd">
+    <tdml:document>
+      <tdml:documentPart type="file">com/toshibacommerce/tlog/ace_80-01_98_13_97-13.dat</tdml:documentPart>
+    </tdml:document>
+    <tdml:infoset>
+      <tdml:dfdlInfoset type="file">com/toshibacommerce/tlog/ace_80-01_98_13_97-13.xml</tdml:dfdlInfoset>
+    </tdml:infoset>
+  </tdml:parserTestCase>
+   
+  <tdml:parserTestCase name="testSA1" root="Transactions" model="com/toshibacommerce/tlog/xsd/TlogSA.xsd">
+    <tdml:document>
+      <tdml:documentPart type="file">com/toshibacommerce/tlog/EAMTRANA_2.DAT</tdml:documentPart>
+    </tdml:document>
+    <tdml:infoset>
+      <tdml:dfdlInfoset type="file">com/toshibacommerce/tlog/EAMTRANA_2.xml</tdml:dfdlInfoset>
+    </tdml:infoset>
+  </tdml:parserTestCase>        
+
+</tdml:testSuite>

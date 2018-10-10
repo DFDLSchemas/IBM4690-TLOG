@@ -52,9 +52,9 @@
 	* Some record types have sub-types which are discriminated either using
 	* initiators or discriminators.
 	* 
-	******************************************************************* --><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/TlogAceFormat" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+	******************************************************************* -->
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/TlogAceFormat" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
 
-        
   <xs:include schemaLocation="TlogAceTypes.xsd"/>
   <xs:import namespace="http://www.ibm.com/dfdl/TlogAceFormat" schemaLocation="TlogAceFormat.xsd"/>
   <xs:include schemaLocation="TlogAceCommon.xsd"/>
@@ -76,7 +76,7 @@
 
     <xs:element dfdl:emptyValueDelimiterPolicy="both" dfdl:initiator="&quot;" dfdl:terminator="&quot;%CR;%LF;" ibmSchExtn:docRoot="true" name="Transaction">
         <xs:complexType>
-            <xs:sequence dfdl:separator="&quot;,&quot;" dfdl:separatorPolicy="suppressed">
+            <xs:sequence dfdl:separator="&quot;,&quot;"  dfdl:separatorPolicy="suppressed" dfdl:separatorSuppressionPolicy="anyEmpty">
                 <xs:element maxOccurs="unbounded" name="TransactionRecord">
                                         <xs:annotation>
             <xs:appinfo source="http://www.ogf.org/dfdl/"/>
@@ -1049,7 +1049,7 @@
                 <xs:element minOccurs="0" name="Category" type="type_PD">
                 </xs:element>
 		        <!-- v1.7 - Name corrected -->
-                <xs:element minOccurs="0" name="Subcategory" type="type_PD">
+                <xs:element minOccurs="0" name="SubCategory" type="type_PD">
                 </xs:element>
                 <xs:element minOccurs="0" name="BenefitQuantity" type="type_PD">
                 </xs:element>
