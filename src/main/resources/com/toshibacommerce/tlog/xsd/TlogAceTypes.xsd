@@ -84,7 +84,7 @@
     </xs:complexType>
     
                   
-  	<xs:simpleType name="type_PD">
+  	<xs:simpleType name="type_PD" dfdl:encoding="iso-8859-1">
   		<xs:restriction base="xs:decimal"/>
   	</xs:simpleType>
   	
@@ -105,7 +105,7 @@
   		<xs:restriction base="xs:string"/>
   	</xs:simpleType>
   	
-  	<xs:simpleType dfdl:representation="text" dfdl:encoding="ISO-8859-1" name="type_String">
+  	<xs:simpleType dfdl:representation="text" name="type_String">
   		<xs:restriction base="xs:string"/>
   	</xs:simpleType>
   	

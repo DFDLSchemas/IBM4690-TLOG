@@ -29,7 +29,7 @@ Test data and infosets are included.
 
 The DFDL schemas are compatible with IBM DFDL 1.1 release, as shipped in IBM Integration Bus 9.0.0.1 onwards and IBM App Connect Enterprise 11.0.0.0 onwards.
 
-The schemas are also compatible with Apache Daffodil version 3.2.0 and higher. The project, re-organized using Daffodil's standard schema project layout, is available on the 'daffodil' branch. (git checkout daffodil to use this branch).
+The schemas are also compatible with Apache Daffodil version 3.2.0 and higher. The project, re-organized using Daffodil's standard schema project layout, is available on the 'daffodil' branch. (git checkout daffodil to use this branch). 
 
 The ACE schemas do not have a target namespace. The SA schemas have a target namespace. 
 

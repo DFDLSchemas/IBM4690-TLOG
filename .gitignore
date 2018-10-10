@@ -1,4 +1,14 @@
 # .gitignore    Put this file in your local repo to indicate files and
 #               directories that git should ignore.
+#               Best practice is NOT to put every kind of IDE settings here, but instead
+#               put those in your home directory .gitignore (which applies across all git repos for you.)
 
 .DS_Store
+.cache
+bin
+lib_managed
+target
+project/target/
+.cache-tests
+.cache-main
+*~

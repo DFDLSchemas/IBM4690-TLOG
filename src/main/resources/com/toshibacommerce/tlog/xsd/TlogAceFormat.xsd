@@ -33,6 +33,8 @@
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:fn="http://www.w3.org/2005/xpath-functions"
            >
+           
+  <xs:include schemaLocation="TlogBaseFormat.xsd"/>
 
 	<xs:annotation>
 		<xs:appinfo source="http://www.ogf.org/dfdl/">
@@ -41,8 +43,7 @@
 			<!-- Most fields are binary ibm4690Packed rep -->
 			<!-- Default separator is a colon -->			
 			<dfdl:defineFormat name="TlogAceFormat">
-				<dfdl:format alignment="1" alignmentUnits="bytes" binaryBooleanFalseRep="0" binaryBooleanTrueRep="1" binaryCalendarRep="ibm4690Packed" binaryDecimalVirtualPoint="0" binaryFloatRep="ieee" binaryNumberCheckPolicy="strict" binaryNumberRep="ibm4690Packed" binaryPackedSignCodes="C D F C" byteOrder="bigEndian" calendarCenturyStart="53" calendarCheckPolicy="lax" calendarDaysInFirstWeek="4" calendarFirstDayOfWeek="Monday" calendarLanguage="en-US" calendarObserveDST="yes" calendarPattern="yyyyMMddHHmmss" calendarPatternKind="explicit" calendarTimeZone="UTC" choiceLengthKind="implicit" decimalSigned="yes" documentFinalTerminatorCanBeMissing="no" emptyValueDelimiterPolicy="none" encoding="US-ASCII" escapeSchemeRef="" fillByte="%#r00;" floating="no" ignoreCase="no" initiatedContent="no" initiator="" leadingSkip="0" lengthKind="delimited" lengthUnits="bytes" nilKind="literalValue" nilValueDelimiterPolicy="none" occursCountKind="implicit" outputNewLine="%CR;%LF;" prefixIncludesPrefixLength="no" representation="binary" separator=":" separatorPolicy="suppressedAtEndLax" separatorPosition="infix" sequenceKind="ordered" terminator="" textBidi="no" textBooleanFalseRep="%#r01;" textBooleanJustification="left" textBooleanPadCharacter="%SP;" textBooleanTrueRep="%#r00;" textCalendarJustification="left" textCalendarPadCharacter="0" textNumberCheckPolicy="lax" textNumberJustification="right" textNumberPadCharacter="0" textNumberRep="standard" textNumberRounding="pattern" textNumberRoundingMode="roundUp" textPadKind="none" textStandardBase="10" textStandardDecimalSeparator="." textStandardExponentCharacter="E" textStandardGroupingSeparator="," textStandardInfinityRep="Inf" textStandardNaNRep="NaN" textStandardZeroRep="" textStringJustification="left" textStringPadCharacter="%SP;" textTrimKind="none" textZonedSignStyle="asciiStandard" trailingSkip="0" truncateSpecifiedLengthString="no" useNilForDefault="no" utf16Width="fixed">
-				</dfdl:format>
+				<dfdl:format ref="tns:TlogBaseFormat" />
 			</dfdl:defineFormat>
 
 		</xs:appinfo>
