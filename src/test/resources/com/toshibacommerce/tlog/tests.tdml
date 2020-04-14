@@ -20,7 +20,7 @@
       <daf:suppressSchemaDefinitionWarnings>
         deprecatedPropertySeparatorPolicy
         encodingErrorPolicyError
-        emptyElementPolicyError
+        emptyElementParsePolicyError
       </daf:suppressSchemaDefinitionWarnings>
       <daf:defaultEmptyElementParsePolicy>treatAsMissing</daf:defaultEmptyElementParsePolicy>
     </daf:tunables>
