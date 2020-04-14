@@ -24,7 +24,16 @@
 	* - New transaction records in the 20 series
 	* Discrimination is either using initiators or discriminators.
 	* 
-	******************************************************************* --><xs:schema targetNamespace="http://www.ibm.com/dfdl/Tlog/SA" xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/TlogSAFormat" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:sa="http://www.ibm.com/dfdl/Tlog/SA" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	******************************************************************* -->
+<xs:schema 
+  targetNamespace="http://www.ibm.com/dfdl/Tlog/SA" 
+  xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" 
+  xmlns:fmt="http://www.ibm.com/dfdl/TlogSAFormat" 
+  xmlns:fn="http://www.w3.org/2005/xpath-functions" 
+  xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions" 
+  xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" 
+  xmlns:sa="http://www.ibm.com/dfdl/Tlog/SA" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
     <xs:include schemaLocation="TlogSATypes.xsd"/>
     <xs:import namespace="http://www.ibm.com/dfdl/TlogSAFormat" schemaLocation="TlogSAFormat.xsd"/>
