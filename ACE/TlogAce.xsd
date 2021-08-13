@@ -45,7 +45,7 @@
     *      - Changed MatchingItemOrdinalNumber to be minOccurs 0
     *      - Changed MatchingItemDiscountAmount to be minOccurs 0
     *      - Changed MatchingItemPrice be minOccurs 0
-    * 1.10: <TODO need real comments for version 1.10>
+    * 1.10: Adding definitions for 99_0_85 and 99_0_86
 	********************************************************************* 
 	*
 	* This DFDL schema is supplied by IBM. It provides a DFDL model for
