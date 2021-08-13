@@ -12,7 +12,7 @@
 	* © Copyright International Business Machines Corporation, 2016.
 	*
 	*********************************************************************
-	* Version 1.9 	TlogAce.xsd
+	* Version 1.10 	TlogAce.xsd
 	*
 	* Change History
 	* 1.2: Correct 99_0_06 PrescriptionId to be variable length
@@ -45,6 +45,7 @@
     *      - Changed MatchingItemOrdinalNumber to be minOccurs 0
     *      - Changed MatchingItemDiscountAmount to be minOccurs 0
     *      - Changed MatchingItemPrice be minOccurs 0
+    * 1.10: Adding definitions for 99_0_85 and 99_0_86
 	********************************************************************* 
 	*
 	* This DFDL schema is supplied by IBM. It provides a DFDL model for
@@ -1204,6 +1205,10 @@
 					</xs:element>
     	            <xs:element ref="TransactionRecord99_0_81">
 					</xs:element>
+    	            <xs:element ref="TransactionRecord99_0_85">
+					</xs:element>
+    	            <xs:element ref="TransactionRecord99_0_86">
+					</xs:element>
     	            <xs:element ref="TransactionRecord99_0_96">
 					</xs:element>
 					<!-- Custom 99 records -->
@@ -1859,6 +1864,67 @@
       				</xs:sequence>
       			  </xs:complexType>
       			</xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xs:sequence>
+		</xs:complexType>
+    </xs:element>
+
+    <xs:element name="TransactionRecord99_0_85">
+        <xs:complexType>
+            <xs:sequence>
+           		<!--
+           		<xs:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xs:element> 
+           		-->
+           	    <xs:element name="Originator" type="type_PI">
+                </xs:element>
+           	    <xs:element name="SubType" type="type_PI">
+						<xs:annotation>
+							<xs:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 85}</dfdl:discriminator>
+							</xs:appinfo>
+						</xs:annotation>
+                </xs:element>
+	            <xs:element name="HealthCareProgram" type="type_PI"/>
+	            <xs:element name="TenderIndicator" type="type_PI"/>
+	            <xs:element name="PurseID" type="type_PD"/>
+	            <xs:element name="PurseDescription" type="type_ASCII"/>
+	            <xs:element name="RequestedAmount" minOccurs="0" type="type_PL"/>
+	            <xs:element name="AuthorizedAmount" minOccurs="0" type="type_PL"/>
+	            <xs:element name="RemainingBalance" minOccurs="0" type="type_PL"/>
+                <xs:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
+            </xs:sequence>
+		</xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="TransactionRecord99_0_86">
+        <xs:complexType>
+            <xs:sequence>
+           		<!--
+           		<xs:element dfdl:inputValueCalc="{xs:hexBinary('99')}" name="StringType" type="type_PS">
+           		</xs:element> 
+           		-->
+           	    <xs:element name="Originator" type="type_PI">
+                </xs:element>
+           	    <xs:element name="SubType" type="type_PI">
+						<xs:annotation>
+							<xs:appinfo source="http://www.ogf.org/dfdl/">
+								<dfdl:discriminator>{../Originator eq 0 and . eq 86}</dfdl:discriminator>
+							</xs:appinfo>
+						</xs:annotation>
+                </xs:element>
+	            <xs:element name="HealthCareProgram" type="type_PI"/>
+	            <xs:element name="TenderIndicator" type="type_PI"/>
+	            <xs:element name="PurseID" type="type_PD"/>
+	            <xs:element name="ItemCode" type="type_PD"/>
+	            <xs:element name="ItemQuantity" type="type_PI"/>
+	            <xs:element name="AdjustmentToPrice" type="type_PL"/>
+	            <xs:element name="UPCPLUindicator" type="type_PI"/>
+	            <xs:element name="ItemReferenceNumber" type="type_PI"/>
+	            <xs:element name="OrdinalNumbers" type="type_ASCII"/>
+	            <!-- <xs:element name="OrdinalNumbers" type="type_PS"/> -->
+	            
                 <xs:element maxOccurs="unbounded" minOccurs="0" ref="CustomUserField"/>
             </xs:sequence>
 		</xs:complexType>
