@@ -7,7 +7,7 @@ version := "0.0.1-SNAPSHOT"
 scalaVersion := "2.12.15"
 
 libraryDependencies ++= Seq(
-  "org.apache.daffodil" %% "daffodil-tdml-processor" % "3.2.0" % "test",
+  "org.apache.daffodil" %% "daffodil-tdml-processor" % "3.5.0" % "test",
   "junit" % "junit" % "4.13.2" % "test",
   "com.github.sbt" % "junit-interface" % "0.13.3" % "test",
   "org.apache.logging.log4j" % "log4j-api" % "2.18.0" % "test",

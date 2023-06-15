@@ -174,7 +174,7 @@
                 </xs:element>
                 <xs:element dfdl:length="2" dfdl:lengthKind="explicit" ibmDfdlExtn:sampleValue="1" name="TransactionNumber" type="type_PI">
                 </xs:element>
-                <xs:element dfdl:length="5" dfdl:lengthKind="explicit" name="DateTime" type="type_PI">
+                <xs:element dfdl:length="5" dfdl:lengthKind="explicit" name="DateTime" type="type_PL">
                 </xs:element>
                 <xs:element dfdl:length="1" dfdl:lengthKind="explicit" ibmDfdlExtn:sampleValue="0F00" name="TransactionType" type="type_PS">
                 </xs:element>
