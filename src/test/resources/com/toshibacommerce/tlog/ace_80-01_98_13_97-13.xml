@@ -5,7 +5,7 @@
       <TransactionRecord00>
         <TerminalNumber xsi:type="xs:hexBinary">0680</TerminalNumber>
         <TransactionNumber xsi:type="xs:int">2</TransactionNumber>
-        <DateTime xsi:type="xs:int">1107191336</DateTime>
+        <DateTime xsi:type="xs:long">1107191336</DateTime>
         <TransactionType xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xsi:type="xs:decimal">16</NumberOfStrings>
         <Operator xsi:type="xs:decimal">1</Operator>
