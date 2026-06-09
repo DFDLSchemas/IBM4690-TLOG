@@ -106,7 +106,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">1</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151416</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151416</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">8</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -249,7 +249,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">2</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151416</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151416</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">24</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -528,7 +528,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">3</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151416</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151416</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">11</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -722,7 +722,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">4</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151416</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151416</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">18</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -978,7 +978,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">5</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151416</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151416</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">22</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -1261,7 +1261,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">6</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151416</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151416</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">23</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -1577,7 +1577,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">7</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">15</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -1776,7 +1776,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">8</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">9</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -1881,7 +1881,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">9</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">22</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -2143,7 +2143,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">10</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">5</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -2208,7 +2208,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">11</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">16</TransactionType>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
         <Password xmlns="" xsi:type="xs:decimal">1</Password>
@@ -2224,7 +2224,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">12</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">3</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -2267,7 +2267,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">13</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">16</TransactionType>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
         <Password xmlns="" xsi:type="xs:decimal">1</Password>
@@ -2283,7 +2283,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">14</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">7</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -2356,7 +2356,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">15</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">16</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">1</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -2401,7 +2401,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">16</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">13</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -2559,7 +2559,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">17</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">16</TransactionType>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
         <Password xmlns="" xsi:type="xs:decimal">1</Password>
@@ -2609,7 +2609,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">18</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">00</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">8</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
@@ -2708,7 +2708,7 @@
       <TransactionRecord00 xmlns="http://www.ibm.com/dfdl/Tlog/SA">
         <TerminalNumber xmlns="" xsi:type="xs:hexBinary">0001</TerminalNumber>
         <TransactionNumber xmlns="" xsi:type="xs:int">19</TransactionNumber>
-        <DateTime xmlns="" xsi:type="xs:int">1010151417</DateTime>
+        <DateTime xmlns="" xsi:type="xs:long">1010151417</DateTime>
         <TransactionType xmlns="" xsi:type="xs:hexBinary">17</TransactionType>
         <NumberOfStrings xmlns="" xsi:type="xs:decimal">17</NumberOfStrings>
         <Operator xmlns="" xsi:type="xs:decimal">1</Operator>
